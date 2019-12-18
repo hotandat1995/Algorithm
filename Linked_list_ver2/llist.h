@@ -27,3 +27,5 @@ void *llist_pop(llist *list);
 
 /* llist_print: print linked list */
 void llist_print(llist *list, void (*print)(void *data));
+
+void llist_reverse(struct node** head);

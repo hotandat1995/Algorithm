@@ -9,8 +9,8 @@ void numprint(void *);
 
 int main()
 {
-    int numbers[] = {3, 8, 23, 1, 8, 45, 3, 11, 15, 12, 42, 9, 0, 53, 15};
-    int more_numbers[] = {7, 10, 4, 11};
+    int numbers[] = {1, 2, 3, 4, 5, 6, 7};
+    int more_numbers[] = {8, 9, 10, 11};
     llist *my_list = llist_create(NULL);
     unsigned int i;
 
@@ -34,6 +34,12 @@ int main()
     // Add numbers to front
     for (i = 0; i < COUNT2; i++)
         llist_push(my_list, &more_numbers[i]);
+
+    // Print list once again
+    llist_print(my_list, numprint);
+
+    // Reverse list
+    llist_reverse(my_list);
 
     // Print list once again
     llist_print(my_list, numprint);

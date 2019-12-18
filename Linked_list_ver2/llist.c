@@ -119,3 +119,19 @@ void llist_print(llist *list, void (*print)(void *))
     }
     putchar('\n');
 }
+
+void llist_reverse(struct node** head)
+{
+    struct node* prev   = NULL;
+    struct node* current = *head;
+    struct node* next_node;
+
+    while (current != NULL)
+    {
+        next_node  = current->next;
+        current->next = prev;
+        prev = current;
+        current = next_node;
+    }
+    *head = prev;
+}
