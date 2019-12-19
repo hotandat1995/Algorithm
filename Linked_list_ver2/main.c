@@ -44,6 +44,9 @@ int main()
     // Print list once again
     llist_print(my_list, numprint);
 
+    llist_rotate_from(my_list,3);
+    llist_print(my_list, numprint);
+
     // Free the list
     llist_free(my_list);
 
