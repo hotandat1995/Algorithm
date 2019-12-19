@@ -180,7 +180,7 @@ struct node *llist_travel_to(llist *head, int position)
     struct node *current = *head;
     for (int i = 0; i < position; i++)
     {
-        // If this position is valid
+        // If this position is not available
         if (current->next == NULL)
         {
             fprintf(stderr, "llist_travel: Not avalable position!");
