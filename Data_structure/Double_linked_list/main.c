@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include "Double_llist.h"
+#include "Doubly_llist.h"
 
-#define COUNT  sizeof numbers / sizeof (int)
-#define COUNT2 sizeof more_numbers / sizeof (int)
+#define COUNT sizeof numbers / sizeof(int)
+#define COUNT2 sizeof more_numbers / sizeof(int)
 
 int numcmp(void *, void *);
 void numprint(void *);
@@ -40,6 +40,7 @@ int main()
     // Print list once again
     dllist_print(my_list, numprint);
 
+    printf("my_list add: %x\n", my_list);
     // Reverse list
     dllist_reverse(my_list);
 

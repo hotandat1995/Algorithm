@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Double_llist.h"
+#include "Doubly_llist.h"
 
 dllist *dllist_create(void *data)
 {
@@ -23,7 +23,7 @@ void dllist_free(dllist *dllist)
     struct node *curr = *dllist;
     struct node *next = NULL;
 
-    while(curr != NULL)
+    while (curr != NULL)
     {
         next = curr->next;
         free(curr);
@@ -90,15 +90,26 @@ void dllist_print(dllist *list, void (*print)(void *data))
 void dllist_reverse(dllist *head)
 {
     struct node *current = *head;
-    struct node *next_node = NULL;
-    struct node *prev_node = NULL;
+    struct node *temp = NULL;
 
     while (current != NULL)
     {
-        next_node = current->next;
-        current->next = current->prev;
-        current->prev = next_node;
-        current = next_node;
+        temp = current->prev;
+        current->prev = current->next;
+        current->next = temp;
+        current = current->prev;
     }
-    *head = next_node;
+
+    // while (current != NULL)
+    // {
+    //     temp = current->next;
+    //     printf("temp: %x, ", temp);
+    //     current->next = current->prev;
+    //     current->prev = temp;
+    //     current = temp;
+    //     printf("current: %x\n", current);
+    // }
+
+    printf("current: %x, head %x, temp: %x\n", current, head, temp);
+    *head = temp;
 }
