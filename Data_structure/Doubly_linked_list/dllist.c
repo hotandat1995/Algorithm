@@ -1,6 +1,21 @@
 #include "dllist.h"
 
+Dllist *initializeDlist()
+{
+    Dllist *new_dlist = (Dllist *)malloc(sizeof(Dllist));
 
+    new_dlist->head = NULL;
+    new_dlist->tail = NULL;
+
+    new_dlist->reverse = reverse;
+    new_dlist->push = push;
+    new_dlist->pop = pop;
+    new_dlist->free_list = free_list;
+    new_dlist->rotate_at = rotate_at;
+    new_dlist->printList = printList;
+
+    return new_dlist;
+}
 
 /* Function to reverse a Doubly Linked List */
 void reverse(struct Node **head_ref)
@@ -53,12 +68,12 @@ int pop(struct Node **head_ref)
 {
     struct Node *current = (*head_ref);
     struct Node *next = NULL;
-    int value = NULL;
+    int value = 0;
 
     if (current == NULL)
     {
         printf("List is NULL");
-        return NULL;
+        return;
     }
 
     next = current->next;
