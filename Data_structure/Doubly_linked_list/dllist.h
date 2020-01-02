@@ -30,3 +30,5 @@ int pop(struct Node **head_ref);
 void free_list(struct Node **head_ref);
 void rotate_at(struct Node **head_ref, int position);
 void printList(struct Node *node);
+
+void freeDlist(Dllist **Dlist);

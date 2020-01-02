@@ -48,4 +48,6 @@ int main()
     printf("\nList after reverse:\n");
     doubly_list->reverse(&doubly_list->head);
     doubly_list->printList(doubly_list->head);
+
+    freeDlist(&doubly_list);
 }

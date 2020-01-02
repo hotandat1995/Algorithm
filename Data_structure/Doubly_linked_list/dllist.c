@@ -73,7 +73,7 @@ int pop(struct Node **head_ref)
     if (current == NULL)
     {
         printf("List is NULL");
-        return;
+        return value;
     }
 
     next = current->next;
@@ -141,4 +141,16 @@ void printList(struct Node *node)
         printf("%d ", node->data);
         node = node->next;
     }
+}
+
+void freeDlist(Dllist **Dlist)
+{
+    Dllist *thisList = (*Dlist);
+    Node *currentNode = thisList->head;
+    Node *nextNode = NULL;
+
+    thisList->free_list(&thisList->head);
+    thisList->tail = NULL;
+
+    free(thisList);
 }
