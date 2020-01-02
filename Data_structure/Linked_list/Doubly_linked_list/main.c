@@ -1,7 +1,7 @@
 /* Program to reverse a doubly linked list */
 #include <stdio.h>
 #include <stdlib.h>
-#include "dllist.h"
+#include "Lib/dllist.h"
 
 /* Driver program to test above functions*/
 int main()
