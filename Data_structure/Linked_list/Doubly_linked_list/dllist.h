@@ -32,3 +32,10 @@ void rotate_at(struct Node **head_ref, int position);
 void printList(struct Node *node);
 
 void freeDlist(Dllist **Dlist);
+
+/*  Will implement soon
+ - Add tail
+ - Insert (anywhere in list)
+ - Remove tail
+ - Remove (anywhere in list)
+*/
