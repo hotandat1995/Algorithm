@@ -14,22 +14,24 @@ typedef struct Dllist
     struct Node *head;
     struct Node *tail;
 
-    void (*reverse)(struct Node **);
-    void (*push)(struct Node **, int);
-    int (*pop)(struct Node **);
-    void (*free_list)(struct Node **);
-    void (*rotate_at)(struct Node **, int);
-    void (*printList)(struct Node *);
+    void (*reverse)(Node **);
+    void (*push)(Node **, int);
+    int (*pop)(Node **);
+    void (*free_list)(Node **);
+    void (*rotate_at)(Node **, int);
+    void (*printList)(Node *);
+    void (*update_tail)(Node **, Node **);
 } Dllist;
 
 Dllist *initializeDlist();
 
-void reverse(struct Node **head_ref);
-void push(struct Node **head_ref, int new_data);
-int pop(struct Node **head_ref);
-void free_list(struct Node **head_ref);
-void rotate_at(struct Node **head_ref, int position);
-void printList(struct Node *node);
+void reverse(Node **head_ref);
+void push(Node **head_ref, int new_data);
+int pop(Node **head_ref);
+void free_list(Node **head_ref);
+void rotate_at(Node **head_ref, int position);
+void printList(Node *node);
+void update_tail(Node **head_ref,Node **tail_ref);
 
 void freeDlist(Dllist **Dlist);
 

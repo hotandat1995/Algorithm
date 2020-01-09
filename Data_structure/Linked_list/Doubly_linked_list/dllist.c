@@ -13,15 +13,16 @@ Dllist *initializeDlist()
     new_dlist->free_list = free_list;
     new_dlist->rotate_at = rotate_at;
     new_dlist->printList = printList;
+    new_dlist->update_tail = update_tail;
 
     return new_dlist;
 }
 
 /* Function to reverse a Doubly Linked List */
-void reverse(struct Node **head_ref)
+void reverse(Node **head_ref)
 {
-    struct Node *temp = NULL;
-    struct Node *current = *head_ref;
+    Node *temp = NULL;
+    Node *current = *head_ref;
 
     /* swap next and prev for all nodes of
        doubly linked list */
@@ -41,10 +42,10 @@ void reverse(struct Node **head_ref)
 
 /* UTILITY FUNCTIONS */
 /* Function to insert a node at the beginging of the Doubly Linked List */
-void push(struct Node **head_ref, int new_data)
+void push(Node **head_ref, int new_data)
 {
     /* allocate node */
-    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
+    Node *new_node = (Node *)malloc(sizeof(Node));
 
     /* put in the data  */
     new_node->data = new_data;
@@ -64,10 +65,10 @@ void push(struct Node **head_ref, int new_data)
     (*head_ref) = new_node;
 }
 
-int pop(struct Node **head_ref)
+int pop(Node **head_ref)
 {
-    struct Node *current = (*head_ref);
-    struct Node *next = NULL;
+    Node *current = (*head_ref);
+    Node *next = NULL;
     int value = 0;
 
     if (current == NULL)
@@ -77,7 +78,7 @@ int pop(struct Node **head_ref)
     }
 
     next = current->next;
-    value = current->prev;
+    value = current->prev->data;
 
     free(current);
     (*head_ref) = next;
@@ -85,10 +86,10 @@ int pop(struct Node **head_ref)
     return value;
 }
 
-void free_list(struct Node **head_ref)
+void free_list(Node **head_ref)
 {
-    struct Node *current = (*head_ref);
-    struct Node *next = NULL;
+    Node *current = (*head_ref);
+    Node *next = NULL;
 
     while (current != NULL)
     {
@@ -98,11 +99,11 @@ void free_list(struct Node **head_ref)
     }
 }
 
-void rotate_at(struct Node **head_ref, int position)
+void rotate_at(Node **head_ref, int position)
 {
-    struct Node *current = (*head_ref);
-    struct Node *next = NULL;
-    struct Node *new_head = NULL;
+    Node *current = (*head_ref);
+    Node *next = NULL;
+    Node *new_head = NULL;
     int pos = 0;
 
     while (current != NULL && pos < position - 1)
@@ -134,7 +135,7 @@ void rotate_at(struct Node **head_ref, int position)
 
 /* Function to print nodes in a given doubly linked list
    This function is same as printList() of singly linked list */
-void printList(struct Node *node)
+void printList(Node *node)
 {
     while (node != NULL)
     {
@@ -153,4 +154,18 @@ void freeDlist(Dllist **Dlist)
     thisList->tail = NULL;
 
     free(thisList);
+}
+
+void update_tail(Node **head_ref, Node **tail_ref)
+{
+    Node *current = (*head_ref);
+    Node *temp = NULL;
+
+    while(current != NULL)
+    {
+        temp = current;
+        current = current->next;
+    }
+
+    (*tail_ref) = temp;
 }

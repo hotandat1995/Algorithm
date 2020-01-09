@@ -1,7 +1,7 @@
 /* Program to reverse a doubly linked list */
 #include <stdio.h>
 #include <stdlib.h>
-#include "Lib/dllist.h"
+#include "dllist.h"
 
 /* Driver program to test above functions*/
 int main()
@@ -48,6 +48,9 @@ int main()
     printf("\nList after reverse:\n");
     doubly_list->reverse(&doubly_list->head);
     doubly_list->printList(doubly_list->head);
+
+    doubly_list->update_tail(&doubly_list->head,&doubly_list->tail);
+    printf("\n Update tail: %d\n",doubly_list->tail->data);
 
     freeDlist(&doubly_list);
 }
