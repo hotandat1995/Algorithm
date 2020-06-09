@@ -2,10 +2,25 @@ import os
 
 SetOption('implicit_cache', 1)
 
-Object('Casting_type/static_cast_test.c', CPPPATH = './Libs')
-Object('memory_func/memmove_test.c', CPPPATH = './Libs')
-Object('multi-argument/multi_arg.c', CPPPATH = './Libs')
-Object('Struct/struct_test.c', CPPPATH = './Libs')
-Object('Union/union_test.c', CPPPATH = './Libs')
+# Object('Casting_type/static_cast_test.c', CPPPATH = './Libs')
+# Object('memory_func/memmove_test.c', CPPPATH = './Libs')
+# Object('multi-argument/multi_arg.c', CPPPATH = './Libs')
+# Object('Struct/struct_test.c', CPPPATH = './Libs')
+# Object('Union/union_test.c', CPPPATH = './Libs')
 
-Program('main.c', CPPPATH = ['./Libs', './Casting_type', './memory_func', './multi-argument', './Struct', './Union'])
+file_list = ['main.c',
+            'Casting_type/static_cast_test.c',
+            'memory_func/memmove_test.c',
+            'multi-argument/multi_arg.c',
+            'Struct/struct_test.c',
+            'Union/union_test.c']
+folder_list = ['./Libs',
+                './Casting_type',
+                './memory_func',
+                './multi-argument',
+                './Struct',
+                './Union',
+                '.']
+
+Program(file_list, CPPPATH = folder_list)
+Decider('MD5-timestamp')

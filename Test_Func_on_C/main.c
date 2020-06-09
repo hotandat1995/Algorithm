@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
     {
       test_union();
     }
-    else if (strcmp("union", argv[1]) == 0)
+    else if (strcmp("struct", argv[1]) == 0)
     {
       test_struct();
     }
