@@ -26,6 +26,10 @@ int main(int argc, char **argv) {
     {
       test_struct();
     }
+    else if (strcmp("func_ptr", argv[1]) == 0)
+    {
+      test_func_ptr();
+    }
     else
     {
       printf("Test test con cu chim\n");

@@ -36,6 +36,7 @@ double average_cal(int num, ...)
 
 void test_multi_arg()
 {
+  printf("---------------Multi-arg test-----------------------");
   printf("For int arg:\n");
   printf("Average of 3,4,5 = %f\n", average_cal(4,0,3,4,5));
   printf("Average of 3,4,5,6 = %f\n", average_cal(5,0,3,4,5,6));
@@ -43,4 +44,5 @@ void test_multi_arg()
   printf("For float arg:\n");
   printf("Average of 2.2, 3.3: %f\n",average_cal(3,1,2.2,3.3 ));
   printf("Average of 2.2, 3.3, 4.4: %f\n",average_cal(4,1,2.2,3.3,4.4));
+  printf("-----------End Multi-arg test-----------------------");
 }

@@ -13,13 +13,15 @@ file_list = ['main.c',
             'memory_func/memmove_test.c',
             'multi-argument/multi_arg.c',
             'Struct/struct_test.c',
-            'Union/union_test.c']
+            'Union/union_test.c',
+            'function_ptr/function_ptr.c']
 folder_list = ['./Libs',
                 './Casting_type',
                 './memory_func',
                 './multi-argument',
                 './Struct',
                 './Union',
+                './function_ptr',
                 '.']
 
 Program(file_list, CPPPATH = folder_list)

@@ -6,8 +6,10 @@ void memmove_test()
   char str_2[] = "Test String";
   char buffer[100];
 
+  printf("---------------Memmove Test-----------------\n");
   memmove(buffer, (void *)&str_2[0], sizeof(str_2)/sizeof(char));
   printf("%s\n",buffer);
   memmove(buffer, (void *)&str_1[0], sizeof(str_1)/sizeof(char));
   printf("%s\n",buffer);
+  printf("-----------End Memmove Test-----------------\n");
 }

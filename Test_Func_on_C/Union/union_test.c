@@ -13,6 +13,8 @@ void test_union()
 {
   union UNI_Test sample;
   sample.Char = 'a';
+
+  printf("-----------------------Test UNION---------------------------\n");
   printf("Size of Union: %d, data store on that: 0x", (int)sizeof(sample));
   print_String(sample.String, sizeof(sample));
 
@@ -32,4 +34,5 @@ void test_union()
   strcpy(sample.String, "12");
   printf("Size of Union: %d, data store on that: 0x", (int)sizeof(sample));
   print_String(sample.String, sizeof(sample));
+  printf("--------------------End Test UNION---------------------------\n");
 }

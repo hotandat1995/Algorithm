@@ -29,3 +29,6 @@ void get_address_of_struct_after_convert();
 
 /* Struct test func */
 void test_struct();
+
+/* Function pointer test func*/
+void test_func_ptr();
