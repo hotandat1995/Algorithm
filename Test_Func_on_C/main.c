@@ -1,11 +1,21 @@
 #include "call_libs.h"
 
+#define HELP_PANEL \
+"Run \"./main <option>\":\n\
+ - memmove: Test memmove function.\n\
+ - multi_arg: Test multi argument.\n\
+ - union: Test union.\n\
+ - struct: Test Struct.\n\
+ - func_ptr: Test function ptr combine with struct.\n\
+Or you can run \"valgrind ./main <option>\" to check memory leak.\n\
+"
+
 int main(int argc, char **argv) {
   int counter;
 
   if (argc == 1)
   {
-    printf("Nothing pass in this command.");
+    printf("%s", HELP_PANEL);
   }
 
   if (argc >= 2)
@@ -32,7 +42,7 @@ int main(int argc, char **argv) {
     }
     else
     {
-      printf("Test test con cu chim\n");
+      printf("%s", HELP_PANEL);
     }
   }
 
