@@ -1,0 +1,223 @@
+"ue_db:" [
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200684> (JT)
+        sim_algo: "milenage",
+        imsi: "222013072584965",
+        opc: "4600C0AF339FF188897C8897CBF71631",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "805BEB595CA5266C696B0CF228DCBC76",
+        impi: "222013072584965@sierrawireless.com",
+        impu: [":222013072584965", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200684> (JT)
+        sim_algo: "milenage",
+        imsi: "206018039559914",
+        opc: "4600C0AF339FF188897C8897CBF71631",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "805BEB595CA5266C696B0CF228DCBC76",
+        impi: "206018039559914@sierrawireless.com",
+        impu: [":206018039559914", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200684> (JT)
+        sim_algo: "milenage",
+        imsi: "208240002934184",
+        opc: "4600C0AF339FF188897C8897CBF71631",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "805BEB595CA5266C696B0CF228DCBC76",
+        impi: "208240002934184@sierrawireless.com",
+        impu: [":208240002934184", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200684> (JT)
+        sim_algo: "milenage",
+        imsi: "234500020200684",
+        opc: "4600C0AF339FF188897C8897CBF71631",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "805BEB595CA5266C696B0CF228DCBC76",
+        impi: "234500020200684@sierrawireless.com",
+        impu: [":234500020200684", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200684> (JT)
+        sim_algo: "milenage",
+        imsi: "424020094510297",
+        opc: "4600C0AF339FF188897C8897CBF71631",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "805BEB595CA5266C696B0CF228DCBC76",
+        impi: "424020094510297@sierrawireless.com",
+        impu: [":424020094510297", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200692> (JT)
+        sim_algo: "milenage",
+        imsi: "206018039559915",
+        opc: "4113983DA0F5B6B017A0C8EE4F77AFC4",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "B2CBE725E6B91E9D168C130E60136417",
+        impi: "206018039559915@sierrawireless.com",
+        impu: [":206018039559915", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200692> (JT)
+        sim_algo: "milenage",
+        imsi: "208240002934185",
+        opc: "4113983DA0F5B6B017A0C8EE4F77AFC4",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "B2CBE725E6B91E9D168C130E60136417",
+        impi: "208240002934185@sierrawireless.com",
+        impu: [":208240002934185", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200692> (JT)
+        sim_algo: "milenage",
+        imsi: "234500020200685",
+        opc: "4113983DA0F5B6B017A0C8EE4F77AFC4",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "B2CBE725E6B91E9D168C130E60136417",
+        impi: "234500020200685@sierrawireless.com",
+        impu: [":234500020200685", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200692> (JT)
+        sim_algo: "milenage",
+        imsi: "424020094510298",
+        opc: "4113983DA0F5B6B017A0C8EE4F77AFC4",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "B2CBE725E6B91E9D168C130E60136417",
+        impi: "424020094510298@sierrawireless.com",
+        impu: [":424020094510298", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200692> (JT)
+        sim_algo: "milenage",
+        imsi: "222013072584966",
+        opc: "4113983DA0F5B6B017A0C8EE4F77AFC4",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "B2CBE725E6B91E9D168C130E60136417",
+        impi: "222013072584966@sierrawireless.com",
+        impu: [":222013072584966", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200700> (JT)
+        sim_algo: "milenage",
+        imsi: "424020094510299",
+        opc: "BE69DB05277D5BBBDE0442BD89CA3C07",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "D2A2132319FAE39005D33EAC130A8766",
+        impi: "424020094510299@sierrawireless.com",
+        impu: [":424020094510299", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200700> (JT)
+        sim_algo: "milenage",
+        imsi: "222013072584967",
+        opc: "BE69DB05277D5BBBDE0442BD89CA3C07",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "D2A2132319FAE39005D33EAC130A8766",
+        impi: "222013072584967@sierrawireless.com",
+        impu: [":222013072584967", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200700> (JT)
+        sim_algo: "milenage",
+        imsi: "206018039559916",
+        opc: "BE69DB05277D5BBBDE0442BD89CA3C07",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "D2A2132319FAE39005D33EAC130A8766",
+        impi: "206018039559916@sierrawireless.com",
+        impu: [":206018039559916", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200700> (JT)
+        sim_algo: "milenage",
+        imsi: "208240002934186",
+        opc: "BE69DB05277D5BBBDE0442BD89CA3C07",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "D2A2132319FAE39005D33EAC130A8766",
+        impi: "208240002934186@sierrawireless.com",
+        impu: [":208240002934186", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200700> (JT)
+        sim_algo: "milenage",
+        imsi: "234500020200686",
+        opc: "BE69DB05277D5BBBDE0442BD89CA3C07",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "D2A2132319FAE39005D33EAC130A8766",
+        impi: "234500020200686@sierrawireless.com",
+        impu: [":234500020200686", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200676> (JT)
+        sim_algo: "milenage",
+        imsi: "234500020200683",
+        opc: "E9EA763231454DCFFF0EC6E8DD6B2C2D",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "B7340EF7DA395109C00932F1C2690501",
+        impi: "234500020200683@sierrawireless.com",
+        impu: [":234500020200683", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200676> (JT)
+        sim_algo: "milenage",
+        imsi: "424020094510296",
+        opc: "E9EA763231454DCFFF0EC6E8DD6B2C2D",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "B7340EF7DA395109C00932F1C2690501",
+        impi: "424020094510296@sierrawireless.com",
+        impu: [":424020094510296", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200676> (JT)
+        sim_algo: "milenage",
+        imsi: "222013072584964",
+        opc: "E9EA763231454DCFFF0EC6E8DD6B2C2D",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "B7340EF7DA395109C00932F1C2690501",
+        impi: "222013072584964@sierrawireless.com",
+        impu: [":222013072584964", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200676> (JT)
+        sim_algo: "milenage",
+        imsi: "206018039559913",
+        opc: "E9EA763231454DCFFF0EC6E8DD6B2C2D",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "B7340EF7DA395109C00932F1C2690501",
+        impi: "206018039559913@sierrawireless.com",
+        impu: [":206018039559913", "tel:+337000000000001", "tel:701"],
+    },
+    {
+        // Sierra Wireless ICCID:<SIM CCID 89332401000013200676> (JT)
+        sim_algo: "milenage",
+        imsi: "208240002934183",
+        opc: "E9EA763231454DCFFF0EC6E8DD6B2C2D",
+        amf: 0x9001,
+        sqn: "000000000000",
+        K: "B7340EF7DA395109C00932F1C2690501",
+        impi: "208240002934183@sierrawireless.com",
+        impu: [":208240002934183", "tel:+337000000000001", "tel:701"],
+    },
+
+]

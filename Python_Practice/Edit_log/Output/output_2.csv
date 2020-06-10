@@ -1,0 +1,196 @@
+Date,Time,Board,Scope,Legato,Debug level,Process name,Process ID,Process Thread,Process Symbol,Exec File Name,Func name,Thread ID,Message
+Mar/4,14:57:56,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=main,pa_sim_simu.c,pa_simSimu_Init(),1260, PA SIM Init
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=main,le_sim.c,le_sim_Init(),1426, SIM 1 is selected.
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=main,le_mdc.c,GetDataCounterState(),886, Retrieved data counter activation state: 1
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=main,le_mdc.c,GetDataCounters(),934," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:56,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=TestThread,main.c,TestThread(),1036, ======== Start UnitTest of MDC API ========
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,CreateModemProfile(),411, profileRef 0x1c1 created for index 1
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,CreateModemProfile(),411, profileRef 0x3c1 created for index 2
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,CreateModemProfile(),411, profileRef 0x5c1 created for index 3
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,CreateModemProfile(),411, profileRef 0x7c1 created for index 4
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,CreateModemProfile(),411, profileRef 0x9c1 created for index 5
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,CreateModemProfile(),411, profileRef 0x1c1 created for index 1
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 1, old connection status -1, new state 2, pdp Type 0"
+Mar/4,14:57:56,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_SetAPN(),2363, Failed to set APN on profile at index 1 with a connected session
+Mar/4,14:57:56,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_SetAuthentication(),2585, Failed to set authentication on profile at index 1 with a connected session
+Mar/4,14:57:56,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_SetPDP(),2233, Failed to set PDP on profile at index 1 with a connected session
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,CreateModemProfile(),411, profileRef 0x3c1 created for index 2
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,CreateModemProfile(),411, profileRef 0x5c1 created for index 3
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,CreateModemProfile(),411, profileRef 0x7c1 created for index 4
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,CreateModemProfile(),411, profileRef 0x9c1 created for index 5
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_GetBytesCounters(),2089," Received and transmitted bytes: rx=0, tx=0"
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 1, old connection status 2, new state 0, pdp Type 0"
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,pa_sim_simu.c,pa_simSimu_ReportSIMState(),254, Report SIM state 2
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_sim.c,NewSimStateHandler(),948, New SIM state.2 for sim identifier.1 (eventPtr 0xb5b01d00)
+Mar/4,14:57:56,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_sim.c,NewSimStateHandler(),960, NewSimStateHandler: Current Selected SIM ID=1
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_sim.c,NewSimStateHandler(),990, Report state 2 on SIM Id 1
+Mar/4,14:57:56,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=main,le_sim.c,SimToolkitHandler(),1048, Update SIM Card information after a refresh
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=main,le_sim.c,SimToolkitHandler(),1082, Report STK event 1 on SIM 1
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=main,le_sim.c,FirstLayerSimToolkitHandler(),1011, Report STK event 1 on SIM 1
+Mar/4,14:57:56,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=main,main.c,SimRefreshHandler(),151, SIM refresh performed
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_SetDefaultAPN(),2421, Search for ICCID  in file /legato/systems/current/apps/modemService/read-only/usr/local/share/apns-iin.json
+Mar/4,14:57:56,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_SetDefaultAPN(),2427, Could not find ICCID  in file /legato/systems/current/apps/modemService/read-only/usr/local/share/apns-iin.json
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_SetDefaultAPN(),2440, Search for MCC/MNC 000/00 in file /legato/systems/current/apps/modemService/read-only/usr/local/share/apns-mccmnc.json
+Mar/4,14:57:56,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_SetDefaultAPN(),2446, Could not find MCC/MNC 000/00 in file /legato/systems/current/apps/modemService/read-only/usr/local/share/apns-mccmnc.json
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_SetDefaultAPN(),2421, Search for ICCID  in file /legato/systems/current/apps/modemService/read-only/usr/local/share/apns-iin.json
+Mar/4,14:57:56,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_SetDefaultAPN(),2427, Could not find ICCID  in file /legato/systems/current/apps/modemService/read-only/usr/local/share/apns-iin.json
+Mar/4,14:57:56,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_SetDefaultAPN(),2440, Search for MCC/MNC 208/01 in file /legato/systems/current/apps/modemService/read-only/usr/local/share/apns-mccmnc.json
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,FindApnWithMccMncFromFile(),514, Got APN 'orange' for MCC/MNC [208/01]
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=main,le_sim.c,SimToolkitHandler(),1048, Update SIM Card information after a refresh
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=main,le_sim.c,SimToolkitHandler(),1082, Report STK event 1 on SIM 1
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=main,le_sim.c,FirstLayerSimToolkitHandler(),1011, Report STK event 1 on SIM 1
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=main,main.c,SimRefreshHandler(),151, SIM refresh performed
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_SetDefaultAPN(),2421, Search for ICCID 89332422217010081060 in file /legato/systems/current/apps/modemService/read-only/usr/local/share/apns-iin.json
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,FindApnWithIccidFromFile(),611, Got APN 'internet.sierrawireless.com' for ICCID 89332422217010081060
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 1, old connection status 0, new state 2, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_GetBytesCounters(),2089," Received and transmitted bytes: rx=0, tx=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 1, old connection status 2, new state 0, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 1, old connection status 0, new state 2, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_GetBytesCounters(),2089," Received and transmitted bytes: rx=0, tx=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 1, old connection status 2, new state 0, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 1, old connection status 0, new state 2, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_GetBytesCounters(),2089," Received and transmitted bytes: rx=0, tx=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 1, old connection status 2, new state 0, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_AddSessionStateHandler(),1565, handlerRef 0x643
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_AddSessionStateHandler(),1565, handlerRef 0x843
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_AddSessionStateHandler(),1565, handlerRef 0xa43
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_AddSessionStateHandler(),1565, handlerRef 0xc43
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_AddSessionStateHandler(),1565, handlerRef 0xe43
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 1, old connection status 0, new state 2, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 2, old connection status -1, new state 2, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 3, old connection status -1, new state 2, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 4, old connection status -1, new state 2, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 5, old connection status -1, new state 2, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_GetBytesCounters(),2089," Received and transmitted bytes: rx=0, tx=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 1, old connection status 2, new state 0, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),630, Enter Test Disconnection:---------------------------------------
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetDisconnectionReasonExt(),2735, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetDisconnectionReasonExt(),2748, Unsupported PDP type provided: 0
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificDisconnectionCodeExt(),2792, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificDisconnectionCodeExt(),2805, Unsupported PDP type provided: 0
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2859, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:57,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2872, Unsupported PDP type provided: 0
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),684," Dual: failureType: 2d, failureCode: 7fffffff"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),703," Normal: failureType: e, failureCode: 2"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),707, End Test Disconnection:---------------------------------------
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),630, Enter Test Disconnection:---------------------------------------
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetDisconnectionReasonExt(),2735, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetDisconnectionReasonExt(),2748, Unsupported PDP type provided: 0
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificDisconnectionCodeExt(),2792, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificDisconnectionCodeExt(),2805, Unsupported PDP type provided: 0
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2859, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:57,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2872, Unsupported PDP type provided: 0
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),684," Dual: failureType: 2d, failureCode: 7fffffff"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),703," Normal: failureType: e, failureCode: 2"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),707, End Test Disconnection:---------------------------------------
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_GetBytesCounters(),2089," Received and transmitted bytes: rx=0, tx=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 2, old connection status 2, new state 0, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),630, Enter Test Disconnection:---------------------------------------
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetDisconnectionReasonExt(),2735, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificDisconnectionCodeExt(),2792, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2859, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),694," Not-Dual: failureType: e, failureCode: 2"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),703," Normal: failureType: e, failureCode: 2"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),707, End Test Disconnection:---------------------------------------
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_GetBytesCounters(),2089," Received and transmitted bytes: rx=0, tx=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 3, old connection status 2, new state 0, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),630, Enter Test Disconnection:---------------------------------------
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetDisconnectionReasonExt(),2735, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificDisconnectionCodeExt(),2792, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2859, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),694," Not-Dual: failureType: e, failureCode: 2"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),703," Normal: failureType: e, failureCode: 2"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),707, End Test Disconnection:---------------------------------------
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_GetBytesCounters(),2089," Received and transmitted bytes: rx=0, tx=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 4, old connection status 2, new state 0, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),630, Enter Test Disconnection:---------------------------------------
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetDisconnectionReasonExt(),2735, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificDisconnectionCodeExt(),2792, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2859, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),694," Not-Dual: failureType: e, failureCode: 2"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),703," Normal: failureType: e, failureCode: 2"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),707, End Test Disconnection:---------------------------------------
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_GetBytesCounters(),2089," Received and transmitted bytes: rx=0, tx=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 5, old connection status 2, new state 0, pdp Type 0"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),630, Enter Test Disconnection:---------------------------------------
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetDisconnectionReasonExt(),2735, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificDisconnectionCodeExt(),2792, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2859, Invalid reference ((nil)) provided!
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:57,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),694," Not-Dual: failureType: e, failureCode: 2"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),703," Normal: failureType: e, failureCode: 2"
+Mar/4,14:57:57,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),707, End Test Disconnection:---------------------------------------
+Mar/4,14:57:57,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 2, old connection status 0, new state 2, pdp Type 0"
+Mar/4,14:57:58,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_GetBytesCounters(),2089," Received and transmitted bytes: rx=0, tx=0"
+Mar/4,14:57:58,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:58,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 2, old connection status 2, new state 0, pdp Type 0"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,CreateModemProfile(),411, profileRef 0xbc1 created for index 101
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,framework,T=TestThread,thread.c,CreateThread(),541, Thread name 'AsyncStartStopSessionThread' has been truncated to 'AsyncStartStopSessionTh'.
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,framework,T=AsyncStartStopSessionTh,thread.c,PThreadStartRoutine(),415, Failed to set thread name for AsyncStartStopSessionTh (34).
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=AsyncStartStopSessionTh,le_mdc.c,le_mdc_StartSessionAsync(),1352, Send start data session command
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=MdcEventThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 1, old connection status 0, new state 2, pdp Type 0"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=MdcEventThread,le_mdc.c,FindAsyncHandlerDbByHandler(),657, Found no async handler 0xb6c685b0 enlisted
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=MdcEventThread,le_mdc.c,ProcessCommandEventHandler(),814, Async handler 0xb6c685b0 not called as its client session is already closed
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,framework,T=TestThread,thread.c,CreateThread(),541, Thread name 'AsyncStartStopSessionThread' has been truncated to 'AsyncStartStopSessionTh'.
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,framework,T=AsyncStartStopSessionTh,thread.c,PThreadStartRoutine(),415, Failed to set thread name for AsyncStartStopSessionTh (34).
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=AsyncStartStopSessionTh,le_mdc.c,le_mdc_StopSessionAsync(),1454, Send stop data session command
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=MdcEventThread,le_mdc.c,le_mdc_GetBytesCounters(),2089," Received and transmitted bytes: rx=0, tx=0"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=MdcEventThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=MdcEventThread,le_mdc.c,NewSessionStateHandler(),298," profileIndex 1, old connection status 2, new state 0, pdp Type 0"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=MdcEventThread,le_mdc.c,FindAsyncHandlerDbByHandler(),657, Found no async handler 0xb6c685b0 enlisted
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=MdcEventThread,le_mdc.c,ProcessCommandEventHandler(),814, Async handler 0xb6c685b0 not called as its client session is already closed
+Mar/4,14:57:59,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),630, Enter Test Disconnection:---------------------------------------
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetDisconnectionReasonExt(),2735, Invalid reference ((nil)) provided!
+Mar/4,14:57:59,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetDisconnectionReasonExt(),2748, Unsupported PDP type provided: 0
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificDisconnectionCodeExt(),2792, Invalid reference ((nil)) provided!
+Mar/4,14:57:59,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificDisconnectionCodeExt(),2805, Unsupported PDP type provided: 0
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2859, Invalid reference ((nil)) provided!
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:59,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2872, Unsupported PDP type provided: 0
+Mar/4,14:57:59,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),684," Dual: failureType: 2d, failureCode: 7fffffff"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),703," Normal: failureType: e, failureCode: 2"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),707, End Test Disconnection:---------------------------------------
+Mar/4,14:57:59,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),630, Enter Test Disconnection:---------------------------------------
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetDisconnectionReasonExt(),2735, Invalid reference ((nil)) provided!
+Mar/4,14:57:59,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetDisconnectionReasonExt(),2748, Unsupported PDP type provided: 0
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificDisconnectionCodeExt(),2792, Invalid reference ((nil)) provided!
+Mar/4,14:57:59,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificDisconnectionCodeExt(),2805, Unsupported PDP type provided: 0
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2859, Invalid reference ((nil)) provided!
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:59,swi-mdm9x28-wp,user.warn,Legato:,-WRN-,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2849, failureTypePtr or failureCodePtr is NULL !
+Mar/4,14:57:59,swi-mdm9x28-wp,user.err,Legato:,=ERR=,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,le_mdc.c,le_mdc_GetPlatformSpecificFailureConnectionReasonExt(),2872, Unsupported PDP type provided: 0
+Mar/4,14:57:59,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),684," Dual: failureType: 2d, failureCode: 7fffffff"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),703," Normal: failureType: e, failureCode: 2"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=Threadhandler,main.c,CheckDisconnectionReason(),707, End Test Disconnection:---------------------------------------
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_GetBytesCounters(),2089," Received and transmitted bytes: rx=369258147, tx=123456789"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=369258147, txBytes=123456789"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_ResetBytesCounter(),2111, Reset received and transmitted bytes
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_GetBytesCounters(),2089," Received and transmitted bytes: rx=0, tx=0"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounters(),960," Saved rxBytes=0, txBytes=0"
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_StopBytesCounter(),2139, Stop counting received and transmitted bytes
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounterState(),904, New data counter activation state: 0
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,le_mdc_StartBytesCounter(),2165, Start counting received and transmitted bytes
+Mar/4,14:57:59,swi-mdm9x28-wp,user.debug,Legato:,DBUG,mdcUnitTest,3140,mdcUnitTest,T=TestThread,le_mdc.c,SetDataCounterState(),904, New data counter activation state: 1
+Mar/4,14:57:59,swi-mdm9x28-wp,user.info,Legato:,INFO,mdcUnitTest,3140,mdcUnitTest,T=TestThread,main.c,TestThread(),1056, ======== UnitTest of MDC API ends with SUCCESS ========
