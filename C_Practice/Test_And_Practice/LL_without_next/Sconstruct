@@ -1,0 +1,10 @@
+import platform
+env = Environment()
+env['SYSTEM'] = platform.system().lower()
+
+if env['SYSTEM'] in ['linux', 'darwin']:
+    env.Append( CCFLAGS=["-m32"] )
+
+
+
+Program(['main.c', 'LL_Lib.c'])

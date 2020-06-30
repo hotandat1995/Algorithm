@@ -1,0 +1,12 @@
+sources:
+{
+  mqttPublisher.c
+}
+
+requires:
+{
+  api:
+  {
+    mqttSer = mqtt.api
+  }
+}

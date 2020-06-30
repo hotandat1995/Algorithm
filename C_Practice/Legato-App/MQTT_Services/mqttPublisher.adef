@@ -1,0 +1,31 @@
+// application version
+version: 1.0.0
+
+// the app should start automatically at start-up
+start: manual
+
+// the app will no be launched inside a sandbox.
+sandboxed: false
+
+executables:
+{
+	mqttPubApp  = ( mqttPublisherComponent )
+}
+
+processes:
+{
+  envVars:
+  {
+    LE_LOG_LEVEL = INFO
+  }
+
+  run:
+  {
+    (mqttPubApp)
+  }
+}
+
+bindings:
+{
+	mqttPubApp.mqttPublisherComponent.mqttSer -> mqttService.mqttSer
+}

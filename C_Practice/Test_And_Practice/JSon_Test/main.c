@@ -9,6 +9,9 @@
 
 #include "nxjson-master/nxjson.h"
 /*------------------------------------------------------------------------------------------------*/
+/* Macro */
+#define ERROR(msg, p) fprintf(stderr, "ERROR: " msg " %s\n", (p));
+/*------------------------------------------------------------------------------------------------*/
 /* Prototype */
 char *load_file(const char *filepath);
 static void dump(const nx_json *json, char *out, char **end, int indent);
@@ -19,19 +22,19 @@ char *load_file(const char *filepath)
   struct stat st;
   if (stat(filepath, &st) == -1)
   {
-    // ERROR("Can't find file\n", filepath);
+    ERROR("Can't find file\n", filepath);
     return NULL;
   }
   int fd = open(filepath, O_RDONLY);
   if (fd == -1)
   {
-    // ERROR("Can't open file\n", filepath);
+    ERROR("Can't open file\n", filepath);
     return NULL;
   }
   char *text = (char *)malloc(st.st_size + 1);
   if (st.st_size != read(fd, text, st.st_size))
   {
-    // ERROR("Can't read file\n");
+    ERROR("Can't read file\n", filepath);
     close(fd);
     return NULL;
   }
@@ -142,7 +145,7 @@ void test_json()
 
 int main(int argc, char **argv)
 {
-  printf("Begin Json Test\n");
+  printf("Begin Json Test:\n");
   test_json();
   return 0;
 }
