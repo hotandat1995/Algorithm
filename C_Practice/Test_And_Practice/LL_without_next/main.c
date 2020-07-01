@@ -8,16 +8,22 @@
 int main(int argc, char **argv)
 {
     printf("Start app!\n");
-    char *input = (char *)malloc(sizeof(char)*10);
-    input = strcpy(input, "123456");
 
     Node *head;
-    init_list(&head, input);
+    init_list(&head, "haha0");
 
-    append_list(head, "haha");
     append_list(head, "haha1");
     append_list(head, "haha2");
+    append_list(head, "haha3");
 
     print_list(head);
+
+    printf("List after reverse:\n");
+    reverse_list(&head);
+    print_list(head);
+
+    free_list(head);
+
+    printf("Done app!\n");
     return 0;
 }

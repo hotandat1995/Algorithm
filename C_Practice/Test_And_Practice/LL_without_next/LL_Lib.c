@@ -1,6 +1,6 @@
 #include "LL_lib.h"
 
-bool init_list(Node **head_in,char *input)
+bool init_list(Node **head_in, char *input)
 {
     Node *head = (Node *)malloc(sizeof(Node));
 
@@ -10,7 +10,8 @@ bool init_list(Node **head_in,char *input)
         return false;
     }
 
-    head->buf = input;
+    head->buf = (char *)malloc(sizeof(char)*10);
+    head->buf = strcpy(head->buf, input);
     head->len = strlen(input);
     head->ref = 0;
 
@@ -38,20 +39,34 @@ bool append_list(Node *head, char *input)
     }
 
     curr->ref = (int)new_node;
-    curr = new_node;
 
-    curr->ref = 0;
-    curr->buf = input;
-    curr->len = strlen(input);
+    new_node->buf = (char *)malloc(sizeof(char)*10);
+    new_node->buf = strcpy(new_node->buf, input);
+    new_node->ref = 0;
+    new_node->len = strlen(input);
 
     return true;
 }
 
-bool remove_ref(int ref_in)
+void reverse_list(Node **head_in)
 {
-    bool result = false;
+    Node *curr = *head_in;
+    Node *prev = NULL, *next = NULL;
 
-    return result;
+    /* In case list just have 1 element*/
+    if (NULL == curr)
+    {
+        return;
+    }
+
+    while (curr != NULL)
+    {
+        next = (Node *)curr->ref;
+        curr->ref = (Node *)prev;
+        prev = curr;
+        curr = next;
+    }
+    *head_in = prev;
 }
 
 void print_list(Node *head)
@@ -63,4 +78,18 @@ void print_list(Node *head)
         curr = (Node *)curr->ref;
     }
     printf("String is : %s, len: %d\n", curr->buf, curr->len);
+}
+
+void free_list(Node *head_in)
+{
+    Node *curr = head_in;
+    Node *next;
+
+    while (curr != NULL)
+    {
+        next = (Node *)curr->ref;
+        free(curr->buf);
+        free(curr);
+        curr = next;
+    }
 }

@@ -1,3 +1,5 @@
+#pragma ONCE
+
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
@@ -12,8 +14,9 @@ typedef struct Node
 
 /* Prototype */
 
-bool init_list(Node **head_in,char *input);
+bool init_list(Node **head_in, char *input);
 bool append_list(Node *head, char *input);
-bool remove_ref(int ref_in);
 
+void reverse_list(Node **head_in);
 void print_list(Node *head);
+void free_list(Node *head_in);
