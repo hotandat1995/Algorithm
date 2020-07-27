@@ -164,7 +164,10 @@ static void mqttClient_dumpBuffer(const unsigned char *buff, unsigned int len)
   }
 }
 
-static void mqttClient_newMsgData(mqttClient_msg_data_t *msgData, MQTTString *topicName, mqttClient_msg_t *msg)
+static void mqttClient_newMsgData(
+  mqttClient_msg_data_t *msgData,
+  MQTTString *topicName,
+  mqttClient_msg_t *msg)
 {
   LE_ASSERT(msgData);
   LE_ASSERT(topicName);
@@ -177,10 +180,14 @@ static void mqttClient_newMsgData(mqttClient_msg_data_t *msgData, MQTTString *to
 static int mqttClient_getNextPacketId(mqttClient_t *clientData)
 {
   LE_ASSERT(clientData);
-  return clientData->session.nextPacketId = (clientData->session.nextPacketId == MQTT_CLIENT_MAX_PACKET_ID) ? 1 : clientData->session.nextPacketId + 1;
+  return clientData->session.nextPacketId =
+           (clientData->session.nextPacketId == MQTT_CLIENT_MAX_PACKET_ID) ? 1 : clientData->session.nextPacketId + 1;
 }
 
-static void mqttClient_SendConnStateEvent(bool isConnected, int32_t connectErrorCode, int32_t subErrorCode)
+static void mqttClient_SendConnStateEvent(
+  bool isConnected,
+  int32_t connectErrorCode,
+  int32_t subErrorCode)
 {
   mqttClient_connStateData_t eventData;
   mqttClient_t *clientData = mqttMain_getClient();
@@ -189,11 +196,18 @@ static void mqttClient_SendConnStateEvent(bool isConnected, int32_t connectError
   eventData.connectErrorCode = connectErrorCode;
   eventData.subErrorCode = subErrorCode;
 
-  LE_DEBUG("MQTT connected(%d), error(%d), sub-error(%d)", eventData.isConnected, eventData.connectErrorCode, eventData.subErrorCode);
+  LE_DEBUG("MQTT connected(%d), error(%d), sub-error(%d)",
+           eventData.isConnected,
+           eventData.connectErrorCode,
+           eventData.subErrorCode);
   le_event_Report(clientData->connStateEvent, &eventData, sizeof(eventData));
 }
 
-static void mqttClient_SendIncomingMessageEvent(const char *topicName, const char *keyName, const char *value, const char *timestamp)
+static void mqttClient_SendIncomingMessageEvent(
+  const char *topicName,
+  const char *keyName,
+  const char *value,
+  const char *timestamp)
 {
   mqttClient_inMsg_t eventData;
   mqttClient_t *clientData = mqttMain_getClient();
@@ -203,11 +217,17 @@ static void mqttClient_SendIncomingMessageEvent(const char *topicName, const cha
   strcpy(eventData.value, value);
   strcpy(eventData.timestamp, timestamp);
 
-  LE_DEBUG("Send MQTT incoming message('%s', ['%s':'%s'@'%s'])", eventData.topicName, eventData.keyName, eventData.value, eventData.timestamp);
+  LE_DEBUG("Send MQTT incoming message('%s', ['%s':'%s'@'%s'])",
+           eventData.topicName,
+           eventData.keyName,
+           eventData.value,
+           eventData.timestamp);
   le_event_Report(clientData->inMsgEvent, &eventData, sizeof(eventData));
 }
 
-static int mqttClient_sendConnect(mqttClient_t *clientData, MQTTPacket_connectData *connectData)
+static int mqttClient_sendConnect(
+  mqttClient_t *clientData,
+  MQTTPacket_connectData *connectData)
 {
   int rc = LE_OK;
 
@@ -220,7 +240,8 @@ static int mqttClient_sendConnect(mqttClient_t *clientData, MQTTPacket_connectDa
     goto cleanup;
   }
 
-  int len = MQTTSerialize_connect(clientData->session.tx.buf, sizeof(clientData->session.tx.buf), connectData);
+  int len = MQTTSerialize_connect(clientData->session.tx.buf,
+                                  sizeof(clientData->session.tx.buf), connectData);
   if (len <= 0)
   {
     LE_ERROR("MQTTSerialize_connect() failed(%d)", len);
@@ -247,7 +268,10 @@ cleanup:
   return rc;
 }
 
-static int mqttClient_sendPublishAck(const char *uid, int nAck, const char *message)
+static int mqttClient_sendPublishAck(
+  const char *uid,
+  int nAck,
+  const char *message)
 {
   mqttClient_t *clientData = mqttMain_getClient();
   char *payload = (char *)malloc(strlen(uid) + strlen(message) + 48);
@@ -345,7 +369,11 @@ static void mqttClient_onIncomingMessage(mqttClient_msg_data_t *md)
       {
         char fullKey[MQTT_CLIENT_KEY_NAME_LEN + 1];
 
-        LE_DEBUG("--> AV message id('%s') key('%s') value('%s') ts('%s')", id, key, value, timestamp);
+        LE_DEBUG("--> AV message id('%s') key('%s') value('%s') ts('%s')",
+                 id,
+                 key,
+                 value,
+                 timestamp);
 
         sprintf(fullKey, "%s.%s", id, key);
         mqttClient_SendIncomingMessageEvent(topicName, fullKey, value, timestamp);
@@ -384,7 +412,8 @@ cleanup:
     free(payload);
 }
 
-static void mqttClient_connExpiryHndlr(le_timer_Ref_t timer)
+static void mqttClient_connExpiryHndlr(
+  le_timer_Ref_t timer)
 {
   mqttClient_t *clientData = le_timer_GetContextPtr(timer);
   int32_t rc = LE_OK;
@@ -410,7 +439,8 @@ cleanup:
   return;
 }
 
-static void mqttClient_cmdExpiryHndlr(le_timer_Ref_t timer)
+static void mqttClient_cmdExpiryHndlr(
+  le_timer_Ref_t timer)
 {
   mqttClient_t *clientData = le_timer_GetContextPtr(timer);
   int32_t rc = LE_OK;
@@ -450,7 +480,8 @@ cleanup:
   return;
 }
 
-static void mqttClient_pingExpiryHndlr(le_timer_Ref_t timer)
+static void mqttClient_pingExpiryHndlr(
+  le_timer_Ref_t timer)
 {
   mqttClient_t *clientData = le_timer_GetContextPtr(timer);
   int32_t rc = LE_OK;
@@ -515,7 +546,10 @@ static int mqttClient_processConnAck(mqttClient_t *clientData)
     goto cleanup;
   }
 
-  rc = MQTTDeserialize_connack((unsigned char *)&sessionPresent, &connack_rc, clientData->session.rx.buf, sizeof(clientData->session.rx.buf));
+  rc = MQTTDeserialize_connack((unsigned char *)&sessionPresent,
+                               &connack_rc,
+                               clientData->session.rx.buf,
+                               sizeof(clientData->session.rx.buf));
   if (rc != 1)
   {
     LE_ERROR("MQTTDeserialize_connack() failed(%d)", rc);
@@ -566,7 +600,12 @@ static int mqttClient_processSubAck(mqttClient_t *clientData)
     goto cleanup;
   }
 
-  rc = MQTTDeserialize_suback(&packetId, 1, &count, &grantedQoS, clientData->session.rx.buf, sizeof(clientData->session.rx.buf));
+  rc = MQTTDeserialize_suback(&packetId,
+                              1,
+                              &count,
+                              &grantedQoS,
+                              clientData->session.rx.buf,
+                              sizeof(clientData->session.rx.buf));
   if (rc != 1)
   {
     LE_ERROR("MQTTDeserialize_suback() failed");
@@ -575,7 +614,9 @@ static int mqttClient_processSubAck(mqttClient_t *clientData)
   }
   else if (clientData->session.nextPacketId != packetId)
   {
-    LE_ERROR("invalid packet ID(%u != %u)", clientData->session.nextPacketId, packetId);
+    LE_ERROR("invalid packet ID(%u != %u)",
+             clientData->session.nextPacketId,
+             packetId);
     rc = LE_BAD_PARAMETER;
     goto cleanup;
   }
@@ -609,7 +650,9 @@ static int mqttClient_processUnSubAck(mqttClient_t *clientData)
     goto cleanup;
   }
 
-  rc = MQTTDeserialize_unsuback(&packetId, clientData->session.rx.buf, sizeof(clientData->session.rx.buf));
+  rc = MQTTDeserialize_unsuback(&packetId,
+                                clientData->session.rx.buf,
+                                sizeof(clientData->session.rx.buf));
   if (rc != 1)
   {
     LE_ERROR("MQTTDeserialize_unsuback() failed");
@@ -637,8 +680,14 @@ static int mqttClient_processPublish(mqttClient_t *clientData)
   LE_DEBUG("---> PUBLISH");
   LE_ASSERT(clientData);
 
-  if (MQTTDeserialize_publish((unsigned char *)&msg.dup, (int *)&msg.qos, (unsigned char *)&msg.retained, (unsigned short *)&msg.id, &topicName,
-                              (unsigned char **)&msg.payload, (int *)&msg.payloadLen, clientData->session.rx.buf, sizeof(clientData->session.rx.buf)) != 1)
+  if (MQTTDeserialize_publish((unsigned char *)&msg.dup,
+                              (int *)&msg.qos,
+                              (unsigned char *)&msg.retained,
+                              (unsigned short *)&msg.id, &topicName,
+                              (unsigned char **)&msg.payload,
+                              (int *)&msg.payloadLen,
+                              clientData->session.rx.buf,
+                              sizeof(clientData->session.rx.buf)) != 1)
   {
     LE_ERROR("MQTTDeserialize_publish() failed");
     rc = LE_BAD_PARAMETER;
@@ -648,9 +697,17 @@ static int mqttClient_processPublish(mqttClient_t *clientData)
   if (msg.qos != MQTT_CLIENT_QOS0)
   {
     if (msg.qos == MQTT_CLIENT_QOS1)
-      len = MQTTSerialize_ack(clientData->session.tx.buf, sizeof(clientData->session.tx.buf), PUBACK, 0, msg.id);
+      len = MQTTSerialize_ack(clientData->session.tx.buf,
+                              sizeof(clientData->session.tx.buf),
+                              PUBACK,
+                              0,
+                              msg.id);
     else if (msg.qos == MQTT_CLIENT_QOS2)
-      len = MQTTSerialize_ack(clientData->session.tx.buf, sizeof(clientData->session.tx.buf), PUBREC, 0, msg.id);
+      len = MQTTSerialize_ack(clientData->session.tx.buf,
+                              sizeof(clientData->session.tx.buf),
+                              PUBREC,
+                              0,
+                              msg.id);
 
     if (len <= 0)
     {
@@ -696,7 +753,11 @@ static int mqttClient_processPubComp(mqttClient_t *clientData)
     goto cleanup;
   }
 
-  rc = MQTTDeserialize_ack(&type, &dup, &packetId, clientData->session.rx.buf, sizeof(clientData->session.rx.buf));
+  rc = MQTTDeserialize_ack(&type,
+                           &dup,
+                           &packetId,
+                           clientData->session.rx.buf,
+                           sizeof(clientData->session.rx.buf));
   if (rc != 1)
   {
     LE_ERROR("MQTTDeserialize_ack() failed");
@@ -724,7 +785,11 @@ static int mqttClient_processPubRec(mqttClient_t *clientData)
   LE_DEBUG("---> PUBREC");
   LE_ASSERT(clientData);
 
-  if (MQTTDeserialize_ack(&type, &dup, &packetId, clientData->session.rx.buf, sizeof(clientData->session.rx.buf)) != 1)
+  if (MQTTDeserialize_ack(&type,
+                          &dup,
+                          &packetId,
+                          clientData->session.rx.buf,
+                          sizeof(clientData->session.rx.buf)) != 1)
   {
     LE_ERROR("MQTTDeserialize_ack() failed");
     rc = LE_BAD_PARAMETER;
@@ -737,7 +802,11 @@ static int mqttClient_processPubRec(mqttClient_t *clientData)
     goto cleanup;
   }
 
-  int len = MQTTSerialize_ack(clientData->session.tx.buf, sizeof(clientData->session.tx.buf), PUBREL, 0, packetId);
+  int len = MQTTSerialize_ack(clientData->session.tx.buf,
+                              sizeof(clientData->session.tx.buf),
+                              PUBREL,
+                              0,
+                              packetId);
   if (len <= 0)
   {
     LE_ERROR("MQTTSerialize_ack() failed(%d)", len);
@@ -774,7 +843,11 @@ static int mqttClient_processPubAck(mqttClient_t *clientData)
     goto cleanup;
   }
 
-  rc = MQTTDeserialize_ack(&type, &dup, &packetId, clientData->session.rx.buf, sizeof(clientData->session.rx.buf));
+  rc = MQTTDeserialize_ack(&type,
+                           &dup,
+                           &packetId,
+                           clientData->session.rx.buf,
+                           sizeof(clientData->session.rx.buf));
   if (rc != 1)
   {
     LE_ERROR("MQTTDeserialize_ack() failed");
@@ -813,7 +886,8 @@ static void mqttClient_socketFdEventHandler(int sockFd, short events)
 
     if ((clientData->session.sock != MQTT_CLIENT_INVALID_SOCKET) && !clientData->session.isConnected)
     {
-      LE_INFO("connected(%s:%d)", clientData->session.config.brokerUrl, clientData->session.config.portNumber);
+      LE_INFO("connected(%s:%d)", clientData->session.config.brokerUrl,
+              clientData->session.config.portNumber);
       rc = le_timer_Stop(clientData->session.connTimer);
       if (rc)
       {
@@ -833,6 +907,12 @@ static void mqttClient_socketFdEventHandler(int sockFd, short events)
         data.username.cstring = clientData->deviceId;
         data.password.cstring = clientData->session.secret;
       }
+
+      LE_INFO("------------------------------------------------------------");
+      LE_INFO("data.clientID.cstring: %s", data.clientID.cstring);
+      LE_INFO("data.username.cstring: %s", data.username.cstring);
+      LE_INFO("data.password.cstring: %s", data.password.cstring);
+      LE_INFO("------------------------------------------------------------");
 
       data.keepAliveInterval = clientData->session.config.keepAlive;
       data.cleansession = 1;
@@ -856,7 +936,9 @@ static void mqttClient_socketFdEventHandler(int sockFd, short events)
   }
   else if (events & POLLIN)
   {
-    uint16_t packetType = MQTTPacket_read(clientData->session.rx.buf, sizeof(clientData->session.rx.buf), mqttClient_read);
+    uint16_t packetType = MQTTPacket_read(clientData->session.rx.buf,
+                                          sizeof(clientData->session.rx.buf),
+                                          mqttClient_read);
     LE_DEBUG("packet type(%d)", packetType);
     switch (packetType)
     {
@@ -946,7 +1028,10 @@ cleanup:
   return;
 }
 
-static void mqttClient_dataConnectionStateHandler(const char *intfName, bool isConnected, void *contextPtr)
+static void mqttClient_dataConnectionStateHandler(
+  const char *intfName,
+  bool isConnected,
+  void *contextPtr)
 {
   mqttClient_t *clientData = (mqttClient_t *)contextPtr;
   int32_t rc = LE_OK;
@@ -1045,7 +1130,10 @@ static int mqttClient_connect(mqttClient_t *clientData)
     goto cleanup;
   }
 
-  clientData->session.sockFdMonitor = le_fdMonitor_Create(MQTT_CLIENT_SOCKET_MONITOR_NAME, clientData->session.sock, mqttClient_socketFdEventHandler, POLLIN | POLLOUT);
+  clientData->session.sockFdMonitor = le_fdMonitor_Create(MQTT_CLIENT_SOCKET_MONITOR_NAME,
+                                      clientData->session.sock,
+                                      mqttClient_socketFdEventHandler,
+                                      POLLIN | POLLOUT);
   if (!clientData->session.sockFdMonitor)
   {
     LE_ERROR("le_fdMonitor_Create() failed");
@@ -1219,7 +1307,9 @@ static char mqttClient_isTopicMatched(char *topicFilter, MQTTString *topicName)
   return (curn == curn_end) && (*curf == '\0');
 }
 
-static int mqttClient_deliverMsg(mqttClient_t *clientData, MQTTString *topicName, mqttClient_msg_t *message)
+static int mqttClient_deliverMsg(mqttClient_t *clientData,
+                                 MQTTString *topicName,
+                                 mqttClient_msg_t *message)
 {
   int i;
   int rc = LE_OK;
@@ -1333,7 +1423,8 @@ static int mqttClient_startSession(mqttClient_t *clientData)
     goto cleanup;
   }
 
-  rc = le_timer_SetMsInterval(clientData->session.pingTimer, clientData->session.config.keepAlive * 1000);
+  rc = le_timer_SetMsInterval(clientData->session.pingTimer,
+                              clientData->session.config.keepAlive * 1000);
   if (rc)
   {
     LE_ERROR("le_timer_SetMsInterval() failed(%d)", rc);
@@ -1354,7 +1445,8 @@ static int mqttClient_startSession(mqttClient_t *clientData)
     goto cleanup;
   }
 
-  LE_INFO("connect(%s:%d)", clientData->session.config.brokerUrl, clientData->session.config.portNumber);
+  LE_INFO("connect(%s:%d)", clientData->session.config.brokerUrl,
+          clientData->session.config.portNumber);
   rc = mqttClient_connect(clientData);
   if (rc)
   {
@@ -1485,7 +1577,10 @@ cleanup:
   return rc;
 }
 
-int mqttClient_subscribe(mqttClient_t *clientData, const char *topicFilter, mqttClient_QoS_e qos, mqttClient_msgHndlr_f messageHandler)
+int mqttClient_subscribe(mqttClient_t *clientData,
+                         const char *topicFilter,
+                         mqttClient_QoS_e qos,
+                         mqttClient_msgHndlr_f messageHandler)
 {
   int rc = LE_OK;
 
@@ -1500,7 +1595,13 @@ int mqttClient_subscribe(mqttClient_t *clientData, const char *topicFilter, mqtt
 
   MQTTString topic = MQTTString_initializer;
   topic.cstring = (char *)topicFilter;
-  int len = MQTTSerialize_subscribe(clientData->session.tx.buf, sizeof(clientData->session.tx.buf), 0, mqttClient_getNextPacketId(clientData), 1, &topic, (int *)&qos);
+  int len = MQTTSerialize_subscribe(clientData->session.tx.buf,
+                                    sizeof(clientData->session.tx.buf),
+                                    0,
+                                    mqttClient_getNextPacketId(clientData),
+                                    1,
+                                    &topic,
+                                    (int *)&qos);
   if (len <= 0)
   {
     LE_ERROR("MQTTSerialize_subscribe() failed(%d)", len);
@@ -1544,7 +1645,9 @@ cleanup:
   return rc;
 }
 
-int mqttClient_unsubscribe(mqttClient_t *clientData, const char *topicFilter)
+int mqttClient_unsubscribe(
+  mqttClient_t *clientData,
+  const char *topicFilter)
 {
   MQTTString topic = MQTTString_initializer;
   int rc = LE_OK;
@@ -1558,7 +1661,12 @@ int mqttClient_unsubscribe(mqttClient_t *clientData, const char *topicFilter)
   }
 
   topic.cstring = (char *)topicFilter;
-  int len = MQTTSerialize_unsubscribe(clientData->session.tx.buf, sizeof(clientData->session.tx.buf), 0, mqttClient_getNextPacketId(clientData), 1, &topic);
+  int len = MQTTSerialize_unsubscribe(clientData->session.tx.buf,
+                                      sizeof(clientData->session.tx.buf),
+                                      0,
+                                      mqttClient_getNextPacketId(clientData),
+                                      1,
+                                      &topic);
   if (len <= 0)
   {
     LE_ERROR("MQTTSerialize_unsubscribe() failed(%d)", len);
@@ -1584,7 +1692,10 @@ cleanup:
   return rc;
 }
 
-int mqttClient_publish(mqttClient_t *clientData, const char *topicName, mqttClient_msg_t *message)
+int mqttClient_publish(
+  mqttClient_t *clientData,
+  const char *topicName,
+  mqttClient_msg_t *message)
 {
   int rc = LE_OK;
   MQTTString topic = MQTTString_initializer;
@@ -1602,8 +1713,13 @@ int mqttClient_publish(mqttClient_t *clientData, const char *topicName, mqttClie
   if (message->qos == MQTT_CLIENT_QOS1 || message->qos == MQTT_CLIENT_QOS2)
     message->id = mqttClient_getNextPacketId(clientData);
 
-  len = MQTTSerialize_publish(clientData->session.tx.buf, sizeof(clientData->session.tx.buf), 0, message->qos,
-                              message->retained, message->id, topic, (unsigned char *)message->payload, message->payloadLen);
+  len = MQTTSerialize_publish(clientData->session.tx.buf,
+                              sizeof(clientData->session.tx.buf),
+                              0,
+                              message->qos,
+                              message->retained, message->id,
+                              topic, (unsigned char *)message->payload,
+                              message->payloadLen);
   if (len <= 0)
   {
     LE_ERROR("MQTTSerialize_publish() failed(%d)", len);
@@ -1655,7 +1771,8 @@ int mqttClient_disconnect(mqttClient_t *clientData)
     goto cleanup;
   }
 
-  int len = MQTTSerialize_disconnect(clientData->session.tx.buf, sizeof(clientData->session.tx.buf));
+  int len = MQTTSerialize_disconnect(clientData->session.tx.buf,
+                                     sizeof(clientData->session.tx.buf));
   if (len > 0)
   {
     rc = mqttClient_write(clientData, len);
@@ -1685,12 +1802,14 @@ int mqttClient_connectUser(mqttClient_t *clientData, const char *password)
 
   if (!clientData->session.isConnected)
   {
-    LE_DEBUG("pw('%s')", password);
+    LE_DEBUG("mqtt client pwd('%s')", password);
     strcpy(clientData->session.secret, password);
 
     if (!clientData->dataConnectionState)
     {
-      clientData->dataConnectionState = le_data_AddConnectionStateHandler(mqttClient_dataConnectionStateHandler, clientData);
+      clientData->dataConnectionState =
+        le_data_AddConnectionStateHandler(mqttClient_dataConnectionStateHandler,
+                                          clientData);
     }
 
     LE_DEBUG("initiated data connection");
@@ -1732,5 +1851,7 @@ void mqttClient_init(mqttClient_t *clientData)
   le_info_ConnectService();
   le_info_GetImei(clientData->deviceId, sizeof(clientData->deviceId));
   LE_DEBUG("IMEI('%s')", clientData->deviceId);
-  sprintf(clientData->subscribeTopic, "%s%s", clientData->deviceId, MQTT_CLIENT_TOPIC_NAME_SUBSCRIBE);
+  sprintf(clientData->subscribeTopic, "%s%s",
+          clientData->deviceId,
+          MQTT_CLIENT_TOPIC_NAME_SUBSCRIBE);
 }

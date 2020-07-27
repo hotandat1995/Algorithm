@@ -54,7 +54,10 @@ int MQTTSerialize_connectLength(MQTTPacket_connectData *options)
   * @param options the options to be used to build the connect packet
   * @return serialized length, or error if 0
   */
-int MQTTSerialize_connect(unsigned char *buf, int buflen, MQTTPacket_connectData *options)
+int MQTTSerialize_connect(
+  unsigned char *buf,
+  int buflen,
+  MQTTPacket_connectData *options)
 {
 	unsigned char *ptr = buf;
 	MQTTHeader header = {0};
@@ -129,7 +132,10 @@ exit:
   * @param len the length in bytes of the data in the supplied buffer
   * @return error code.  1 is success, 0 is failure
   */
-int MQTTDeserialize_connack(unsigned char *sessionPresent, unsigned char *connack_rc, unsigned char *buf, int buflen)
+int MQTTDeserialize_connack(
+  unsigned char *sessionPresent,
+  unsigned char *connack_rc,
+  unsigned char *buf, int buflen)
 {
 	MQTTHeader header = {0};
 	unsigned char *curdata = buf;
@@ -172,7 +178,10 @@ exit:
   * @param packettype the message type
   * @return serialized length, or error if 0
   */
-int MQTTSerialize_zero(unsigned char *buf, int buflen, unsigned char packettype)
+int MQTTSerialize_zero(
+  unsigned char *buf,
+  int buflen,
+  unsigned char packettype)
 {
 	MQTTHeader header = {0};
 	int rc = -1;
@@ -202,7 +211,9 @@ exit:
   * @param buflen the length in bytes of the supplied buffer, to avoid overruns
   * @return serialized length, or error if 0
   */
-int MQTTSerialize_disconnect(unsigned char *buf, int buflen)
+int MQTTSerialize_disconnect(
+  unsigned char *buf,
+  int buflen)
 {
 	return MQTTSerialize_zero(buf, buflen, DISCONNECT);
 }
@@ -213,7 +224,9 @@ int MQTTSerialize_disconnect(unsigned char *buf, int buflen)
   * @param buflen the length in bytes of the supplied buffer, to avoid overruns
   * @return serialized length, or error if 0
   */
-int MQTTSerialize_pingreq(unsigned char *buf, int buflen)
+int MQTTSerialize_pingreq(
+  unsigned char *buf,
+  int buflen)
 {
 	return MQTTSerialize_zero(buf, buflen, PINGREQ);
 }

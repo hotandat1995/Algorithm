@@ -53,7 +53,11 @@ bool enqueue(queue_t *queue, int item)
     printf("Queue is FULL!\n");
     return false;
   }
-
+  /**
+   * queue->rear = (queue->rear + 1) % queue->capacity;
+   * this line is use to update the new rear position
+   * it keep the rear positon in 1 circle when it larger than capacity.
+   */
   queue->rear = (queue->rear + 1) % queue->capacity;
   queue->array[queue->rear] = item;
   queue->size++;

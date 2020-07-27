@@ -1,0 +1,30 @@
+version: 1.0.0
+start: manual
+sandboxed: false
+
+executables:
+{
+  UART_Service = ( UART_ServiceComponent )
+}
+
+processes:
+{
+  envVars:
+  {
+    LE_LOG_LEVEL = INFO
+  }
+
+  run:
+  {
+    (UART_Service)
+  }
+}
+
+requires:
+{
+  device:
+  {
+    // Get read and write access to the UART2 port.
+    [rw]    /dev/ttyHS1   /dev/ttyHS1
+  }
+}

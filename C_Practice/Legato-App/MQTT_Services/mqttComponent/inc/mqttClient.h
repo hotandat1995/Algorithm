@@ -37,6 +37,9 @@
 #define MQTT_CLIENT_TIMESTAMP_LEN                     16
 
 #define MQTT_CLIENT_DEFAULT_SIZE                      32
+
+#define MQTT_CLIENT_SECRET_SIZE                       128
+
 #define MQTT_CLIENT_MAX_URL_LENGTH                    256
 #define MQTT_CLIENT_MAX_PAYLOAD_SIZE                  2048
 #define MQTT_CLIENT_MQTT_VERSION                      3
@@ -119,7 +122,7 @@ typedef struct _mqttClient_session_t
   mqttClient_config_t                  config;
   mqttClient_bufferInfo_t              tx;
   mqttClient_bufferInfo_t              rx;
-  char                                 secret[MQTT_CLIENT_DEFAULT_SIZE];
+  char                                 secret[MQTT_CLIENT_SECRET_SIZE];
   uint32_t                             cmdLen;
   uint32_t                             cmdRetries;
   uint32_t                             nextPacketId;

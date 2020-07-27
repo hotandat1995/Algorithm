@@ -205,7 +205,10 @@ void writeMQTTString(unsigned char **pptr, MQTTString mqttstring)
  * @param enddata pointer to the end of the data: do not read beyond
  * @return 1 if successful, 0 if not
  */
-int readMQTTLenString(MQTTString *mqttstring, unsigned char **pptr, unsigned char *enddata)
+int readMQTTLenString(
+    MQTTString *mqttstring,
+    unsigned char **pptr,
+    unsigned char *enddata)
 {
 	int rc = 0;
 
@@ -251,7 +254,7 @@ int MQTTstrlen(MQTTString mqttstring)
 int MQTTPacket_equals(MQTTString *a, char *bptr)
 {
 	int alen = 0,
-		blen = 0;
+	    blen = 0;
 	char *aptr;
 
 	if (a->cstring)
@@ -327,7 +330,7 @@ static int MQTTPacket_decodenb(MQTTTransport *trp)
 
 	FUNC_ENTRY;
 	if (trp->len == 0)
-	{ /* initialize on first call */
+	{	/* initialize on first call */
 		trp->multiplier = 1;
 		trp->rem_len = 0;
 	}
@@ -375,7 +378,7 @@ int MQTTPacket_readnb(unsigned char *buf, int buflen, MQTTTransport *trp)
 	{
 	default:
 		trp->state = 0;
-		/*FALLTHROUGH*/
+	/*FALLTHROUGH*/
 	case 0:
 		/* 1. read the header byte.  This has the packet type in it */
 		if ((frc = (*trp->getfn)(trp->sck, buf, 1)) == -1)
@@ -387,8 +390,8 @@ int MQTTPacket_readnb(unsigned char *buf, int buflen, MQTTTransport *trp)
 			return 0;
 		trp->len = 0;
 		++trp->state;
-		/*FALLTHROUGH*/
-		/* 2. read the remaining length.  This is variable in itself */
+	/*FALLTHROUGH*/
+	/* 2. read the remaining length.  This is variable in itself */
 	case 2:
 		if ((frc = MQTTPacket_decodenb(trp)) == MQTTPACKET_READ_ERROR)
 		{
@@ -404,7 +407,7 @@ int MQTTPacket_readnb(unsigned char *buf, int buflen, MQTTTransport *trp)
 			goto exit;
 		}
 		++trp->state;
-		/*FALLTHROUGH*/
+	/*FALLTHROUGH*/
 	case 3:
 		/* 3. read the rest of the buffer using a callback to supply the rest of the data */
 		if ((frc = (*trp->getfn)(trp->sck, buf + trp->len, trp->rem_len)) == -1)

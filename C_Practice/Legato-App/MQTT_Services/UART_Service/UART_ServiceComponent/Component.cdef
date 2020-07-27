@@ -1,0 +1,5 @@
+sources:
+{
+  UART_service.c
+  packed_data.c
+}

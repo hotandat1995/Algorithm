@@ -33,8 +33,16 @@
   * @param buflen the length in bytes of the data in the supplied buffer
   * @return error code.  1 is success
   */
-int MQTTDeserialize_publish(unsigned char *dup, int *qos, unsigned char *retained, unsigned short *packetid, MQTTString *topicName,
-							unsigned char **payload, int *payloadlen, unsigned char *buf, int buflen)
+int MQTTDeserialize_publish(
+  unsigned char *dup,
+  int *qos,
+  unsigned char *retained,
+  unsigned short *packetid,
+  MQTTString *topicName,
+  unsigned char **payload,
+  int *payloadlen,
+  unsigned char *buf,
+  int buflen)
 {
 	MQTTHeader header = {0};
 	unsigned char *curdata = buf;
@@ -58,7 +66,7 @@ int MQTTDeserialize_publish(unsigned char *dup, int *qos, unsigned char *retaine
 	enddata = curdata + mylen;
 
 	if (!readMQTTLenString(topicName, &curdata, enddata) ||
-		enddata - curdata < 0) /* do we have enough data to read the protocol version byte? */
+	    enddata - curdata < 0) /* do we have enough data to read the protocol version byte? */
 	{
 		LE_ERROR("invalid data");
 		goto exit;
@@ -84,7 +92,11 @@ exit:
   * @param buflen the length in bytes of the data in the supplied buffer
   * @return error code.  1 is success, 0 is failure
   */
-int MQTTDeserialize_ack(unsigned char *packettype, unsigned char *dup, unsigned short *packetid, unsigned char *buf, int buflen)
+int MQTTDeserialize_ack(unsigned char *packettype,
+                        unsigned char *dup,
+                        unsigned short *packetid,
+                        unsigned char *buf,
+                        int buflen)
 {
 	MQTTHeader header = {0};
 	unsigned char *curdata = buf;

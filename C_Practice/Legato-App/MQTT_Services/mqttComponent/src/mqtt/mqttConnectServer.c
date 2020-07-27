@@ -31,10 +31,10 @@ int MQTTPacket_checkVersion(MQTTString *protocol, int version)
 	int rc = 0;
 
 	if (version == 3 && memcmp(protocol->lenstring.data, "MQIsdp",
-							   min(6, protocol->lenstring.len)) == 0)
+	                           min(6, protocol->lenstring.len)) == 0)
 		rc = 1;
 	else if (version == 4 && memcmp(protocol->lenstring.data, "MQTT",
-									min(4, protocol->lenstring.len)) == 0)
+	                                min(4, protocol->lenstring.len)) == 0)
 		rc = 1;
 	return rc;
 }
@@ -65,7 +65,7 @@ int MQTTDeserialize_connect(MQTTPacket_connectData *data, unsigned char *buf, in
 	curdata += MQTTPacket_decodeBuf(curdata, &mylen); /* read remaining length */
 
 	if (!readMQTTLenString(&Protocol, &curdata, enddata) ||
-		enddata - curdata < 0) /* do we have enough data to read the protocol version byte? */
+	    enddata - curdata < 0) /* do we have enough data to read the protocol version byte? */
 	{
 		LE_ERROR("not enough data");
 		goto exit;
@@ -91,7 +91,7 @@ int MQTTDeserialize_connect(MQTTPacket_connectData *data, unsigned char *buf, in
 			data->will.qos = flags.bits.willQoS;
 			data->will.retained = flags.bits.willRetain;
 			if (!readMQTTLenString(&data->will.topicName, &curdata, enddata) ||
-				!readMQTTLenString(&data->will.message, &curdata, enddata))
+			    !readMQTTLenString(&data->will.message, &curdata, enddata))
 			{
 				LE_ERROR("invalid data");
 				goto exit;
@@ -105,7 +105,7 @@ int MQTTDeserialize_connect(MQTTPacket_connectData *data, unsigned char *buf, in
 				goto exit; /* username flag set, but no username supplied - invalid */
 			}
 			if (flags.bits.password &&
-				(enddata - curdata < 3 || !readMQTTLenString(&data->password, &curdata, enddata)))
+			    (enddata - curdata < 3 || !readMQTTLenString(&data->password, &curdata, enddata)))
 			{
 				LE_ERROR("no password");
 				goto exit; /* password flag set, but no password supplied - invalid */
@@ -132,7 +132,11 @@ exit:
   * @param sessionPresent the MQTT 3.1.1 sessionPresent flag
   * @return serialized length, or error if 0
   */
-int MQTTSerialize_connack(unsigned char *buf, int buflen, unsigned char connack_rc, unsigned char sessionPresent)
+int MQTTSerialize_connack(
+  unsigned char *buf,
+  int buflen,
+  unsigned char connack_rc,
+  unsigned char sessionPresent)
 {
 	MQTTHeader header = {0};
 	int rc = 0;
