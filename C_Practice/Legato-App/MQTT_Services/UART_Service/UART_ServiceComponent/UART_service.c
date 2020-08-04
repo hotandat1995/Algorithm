@@ -49,6 +49,13 @@ void get_uart_data()
       LE_INFO("Topic: %s", sent_data->topic.topic_data);
       LE_INFO("Content: %s", sent_data->content.content_data);
       LE_INFO("CRC code: 0x%.4x", sent_data->crc_code);
+
+      /* Sent this package to publisher
+        if publish success return frame OK to PIN-HUB
+        else return frame FAIL to PIN-HUB
+      */
+
+      /* Remove the package after use */
       deinit_package(sent_data);
     }
     else

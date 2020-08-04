@@ -1,0 +1,12 @@
+sources:
+{
+  mqttSubcriber.c
+}
+
+requires:
+{
+  api:
+  {
+    mqttSer = mqtt.api
+  }
+}

@@ -23,13 +23,17 @@ static const int32_t portNumber = 8883;
 static void Publisher_timer_Handler(le_timer_Ref_t timer)
 {
   static int32_t errCode;
-  // if (!mqttSer_GetConnectionState())
-  // {
-  //   LE_ERROR("Not connected!");
-  //   return;
-  // }
+  if (!mqttSer_GetConnectionState())
+  {
+    LE_DEBUG("Not connected!");
+    return;
+  }
   LE_DEBUG("Push data to cloud");
   mqttSer_Send(Key_Test, Value_Test, &errCode);
+  if (errCode != LE_OK)
+  {
+    LE_DEBUG("Publish failed");
+  }
 }
 
 COMPONENT_INIT

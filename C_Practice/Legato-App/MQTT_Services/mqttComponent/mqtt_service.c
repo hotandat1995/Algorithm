@@ -91,7 +91,7 @@ static int mqttService_SendMessageJson(const char *jsonPayloadIn)
       goto cleanup;
     }
 
-cleanup:
+  cleanup:
     if (topic)
       free(topic);
     // if (payload) free(payload);
@@ -227,14 +227,15 @@ int32_t mqtt_GetConnectionState(void)
 }
 
 mqtt_SessionStateHandlerRef_t mqtt_AddSessionStateHandler(
-  mqtt_SessionStateHandlerFunc_t handlerPtr,
-  void *contextPtr)
+    mqtt_SessionStateHandlerFunc_t handlerPtr,
+    void *contextPtr)
 {
   LE_DEBUG("add session state handler(%p)", handlerPtr);
-  le_event_HandlerRef_t handlerRef = le_event_AddLayeredHandler("MqttConnState",
-                                     mqttClient.connStateEvent,
-                                     mqttService_SessionStateHandler,
-                                     (le_event_HandlerFunc_t)handlerPtr);
+  le_event_HandlerRef_t handlerRef =
+      le_event_AddLayeredHandler("MqttConnState",
+                                 mqttClient.connStateEvent,
+                                 mqttService_SessionStateHandler,
+                                 (le_event_HandlerFunc_t)handlerPtr);
 
   le_event_SetContextPtr(handlerRef, contextPtr);
   return (mqtt_SessionStateHandlerRef_t)(handlerRef);
@@ -247,14 +248,15 @@ void mqtt_RemoveSessionStateHandler(mqtt_SessionStateHandlerRef_t addHandlerRef)
 }
 
 mqtt_IncomingMessageHandlerRef_t mqtt_AddIncomingMessageHandler(
-  mqtt_IncomingMessageHandlerFunc_t handlerPtr,
-  void *contextPtr)
+    mqtt_IncomingMessageHandlerFunc_t handlerPtr,
+    void *contextPtr)
 {
   LE_DEBUG("add incoming message handler(%p)", handlerPtr);
-  le_event_HandlerRef_t handlerRef = le_event_AddLayeredHandler("MqttIncomingMessage",
-                                     mqttClient.inMsgEvent,
-                                     mqttService_IncomingMessageHandler,
-                                     (le_event_HandlerFunc_t)handlerPtr);
+  le_event_HandlerRef_t handlerRef =
+      le_event_AddLayeredHandler("MqttIncomingMessage",
+                                 mqttClient.inMsgEvent,
+                                 mqttService_IncomingMessageHandler,
+                                 (le_event_HandlerFunc_t)handlerPtr);
   mqttClient_t *Test = mqttService_getClient();
   LE_INFO("Trash values: %x", (uint32_t)Test);
 
@@ -262,7 +264,8 @@ mqtt_IncomingMessageHandlerRef_t mqtt_AddIncomingMessageHandler(
   return (mqtt_IncomingMessageHandlerRef_t)(handlerRef);
 }
 
-void mqtt_RemoveIncomingMessageHandler(mqtt_IncomingMessageHandlerRef_t addHandlerRef)
+void mqtt_RemoveIncomingMessageHandler(
+    mqtt_IncomingMessageHandlerRef_t addHandlerRef)
 {
   LE_DEBUG("remove incoming message handler(%p)", addHandlerRef);
   le_event_RemoveHandler((le_event_HandlerRef_t)addHandlerRef);

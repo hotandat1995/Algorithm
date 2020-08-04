@@ -20,6 +20,7 @@ wp77xx:
 			-i mqttComponent/inc/mqtt \
 			mqttService.adef
 	mkapp -v -t $@ mqttPublisher.adef
+	mkapp -v -t $@ mqttSubcriber.adef
 
 clean:
 	rm -rf _build_* *.ar7 *.wp7 *.ar86 *.wp85 *.wp85.update *.localhost

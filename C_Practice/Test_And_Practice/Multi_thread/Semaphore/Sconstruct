@@ -1,0 +1,2 @@
+Program('Sem_parent.c', CCFLAGS='-g -pthread', LINKFLAGS='-pthread')
+Program('Sem_chld.c', CCFLAGS='-g -pthread', LINKFLAGS='-pthread')

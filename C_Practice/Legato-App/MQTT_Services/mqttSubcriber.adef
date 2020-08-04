@@ -9,7 +9,7 @@ sandboxed: false
 
 executables:
 {
-	mqttPubApp  = ( mqttPublisherComponent )
+	mqttSubApp  = ( mqttSubcriberComponent )
 }
 
 processes:
@@ -21,11 +21,11 @@ processes:
 
   run:
   {
-    (mqttPubApp)
+    (mqttSubApp)
   }
 }
 
 bindings:
 {
-	mqttPubApp.mqttPublisherComponent.mqttSer -> mqttService.mqttSer
+	mqttSubApp.mqttSubcriberComponent.mqttSer -> mqttService.mqttSer
 }

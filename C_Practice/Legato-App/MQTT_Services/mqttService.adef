@@ -19,7 +19,7 @@
 version: 1.0.0
 
 // the app should start automatically at start-up
-start: auto
+start: manual
 
 // the app will no be launched inside a sandbox.
 sandboxed: false

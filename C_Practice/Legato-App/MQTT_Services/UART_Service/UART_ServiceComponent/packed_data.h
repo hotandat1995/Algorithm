@@ -15,6 +15,17 @@
 #define TOPIC_SIZE_INDEX_1          3
 #define TOPIC_DATA_START_INDEX      5
 
+/*******************************************************************************
+ * Package in:
+ *  - start byte: 0x06
+ *  - total data lenth: 2 bytes (count after this 2 bytes)
+ *  - topic length: 2 bytes
+ *  - topic data
+ *  - content length: 2 bytes
+ *  - content
+ *  - CRC code: 2 bytes
+ *  - END byte: 0x0D
+ ******************************************************************************/
 typedef struct topic_t
 {
   uint16_t topic_sz;        ///< Topic size
