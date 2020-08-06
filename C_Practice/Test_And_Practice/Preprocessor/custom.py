@@ -1,0 +1,2 @@
+FLAG_BUILD_1 = 1
+FLAG_BUILD_2 = 0

@@ -9,7 +9,8 @@
 #define SEM_NAME "/semaphore_example"
 #define ITERS 10
 
-int main(void) {
+int main(void)
+{
     sem_t *semaphore = sem_open(SEM_NAME, O_RDWR);
     if (semaphore == SEM_FAILED) {
         perror("sem_open(3) failed");
@@ -23,7 +24,7 @@ int main(void) {
             continue;
         }
 
-        printf("PID %ld acquired semaphore\n", (long) getpid());
+        printf("PID %ld acquired semaphore\n", (long)getpid());
 
         if (sem_post(semaphore) < 0) {
             perror("sem_post(3) error on child");

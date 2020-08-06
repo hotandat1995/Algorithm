@@ -1,0 +1,2 @@
+Program('person_1.c')
+Program('person_2.c')
