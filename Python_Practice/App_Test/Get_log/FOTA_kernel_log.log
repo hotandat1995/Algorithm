@@ -1,0 +1,88 @@
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_pre_init::Base = 0
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: ats_rtc_init: Time read from RTC -- year = 70, month = 0,day = 1
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Value read from RTC seconds = 68000
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_init_config: ATS_RTC initialized
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_pre_init::Base = 1
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]:  Storage Name: ats_1 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Opening File: /data/time/ats_1
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: time_persistent_memory_opr:Genoff Read operation 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_pre_init::Base = 2
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]:  Storage Name: ats_2 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Opening File: /data/time/ats_2
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: time_persistent_memory_opr:Genoff Read operation 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Unable to open filefor read
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_post_init:Error in accessing storage
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_pre_init::Base = 3
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]:  Storage Name: ats_3 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Opening File: /data/time/ats_3
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: time_persistent_memory_opr:Genoff Read operation 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Unable to open filefor read
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_post_init:Error in accessing storage
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_pre_init::Base = 4
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]:  Storage Name: ats_4 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Opening File: /data/time/ats_4
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: time_persistent_memory_opr:Genoff Read operation 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Unable to open filefor read
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_post_init:Error in accessing storage
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_pre_init::Base = 5
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]:  Storage Name: ats_5 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Opening File: /data/time/ats_5
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: time_persistent_memory_opr:Genoff Read operation 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Unable to open filefor read
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_post_init:Error in accessing storage
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_pre_init::Base = 6
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]:  Storage Name: ats_6 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Opening File: /data/time/ats_6
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: time_persistent_memory_opr:Genoff Read operation 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Unable to open filefor read
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_post_init:Error in accessing storage
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_pre_init::Base = 7
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]:  Storage Name: ats_7 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Opening File: /data/time/ats_7
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: time_persistent_memory_opr:Genoff Read operation 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Unable to open filefor read
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_post_init:Error in accessing storage
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_pre_init::Base = 8
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]:  Storage Name: ats_8 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Opening File: /data/time/ats_8
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: time_persistent_memory_opr:Genoff Read operation 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Unable to open filefor read
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_post_init:Error in accessing storage
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_pre_init::Base = 9
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]:  Storage Name: ats_9 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Opening File: /data/time/ats_9
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: time_persistent_memory_opr:Genoff Read operation 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Unable to open filefor read
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_post_init:Error in accessing storage
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_pre_init::Base = 10
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]:  Storage Name: ats_10 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Opening File: /data/time/ats_10
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: time_persistent_memory_opr:Genoff Read operation 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Unable to open filefor read
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_post_init:Error in accessing storage
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_pre_init::Base = 11
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]:  Storage Name: ats_11 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Opening File: /data/time/ats_11
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: time_persistent_memory_opr:Genoff Read operation 
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Unable to open filefor read
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_post_init:Error in accessing storage
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_init_config: Other bases initilized, exiting genoff_init
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: TIME_DAEMON_MDM genoff_boot_tod_init swimcu
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_tod_swimcu_update failed to open TOD update node
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: TIME_DAEMON_MDM genoff_boot_tod_init: from generic offset
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_opr: Base = 1, val = 11659311152, operation = 1
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff get for 1
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: rtc_get: Time read from RTC -- year = 70, month = 0,day = 1
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Value read from RTC seconds = 68000
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Value read from RTC seconds = 68000
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Final Time = 1595451260003
+Dec 31 19:01:08 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_boot_tod_init: Updating system time to sec=1595451260, usec=3000
+Jul 22 15:54:20 swi-mdm9x28-wp user.err time_daemon_mdm:[793]:  starting with pid (793)
+Jul 22 15:54:20 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_modem_qmi_service_request: Initiallizing QMI 
+Jul 22 15:54:20 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-6
+Jul 22 15:54:20 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_modem_qmi_service_request: qmi_client_get_service_list returned -2num_services 0
+Jul 22 15:54:22 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_modem_qmi_service_request: qmi_client_get_service_list returned -2num_services 0
+Jul 22 15:54:24 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_modem_qmi_service_request: qmi_client_get_service_list returned -2num_services 0
+Jul 22 15:54:25 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_modem_qmi_service_request: qmi_client_get_service_list returned 0num_services 1
+Jul 22 15:54:25 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: genoff_modem_qmi_service_request: Sending initial transaction to read time
+Jul 22 15:54:37 swi-mdm9x28-wp user.err time_daemon_mdm:[793]: Daemon:genoff_modem_qmi_service_request: Error in reading full time ignoring update rc=-3 resp=0 
