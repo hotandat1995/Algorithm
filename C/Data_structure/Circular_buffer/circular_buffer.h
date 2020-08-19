@@ -3,12 +3,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define EMPTY_BUF 0
 typedef struct cir_buf_t
 {
     int32_t *data;      ///< The head of buffer
     int32_t buf_sz;     ///< Size of buffer
     int32_t start_idx;  ///< Start index
     int32_t end_idx;    ///< End index
+    int32_t curr_sz;    ///< Current size
 } cir_buf_t;
 
 typedef struct cir_buf_handler_t

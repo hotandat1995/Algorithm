@@ -20,50 +20,35 @@ static cir_buf_t *init_cir_buf(int32_t new_buf_size)
     new_buf->buf_sz = new_buf_size;
     new_buf->start_idx = 0;
     new_buf->end_idx = 0;
+    new_buf->curr_sz = EMPTY_BUF;
 
     return new_buf;
 }
 
 static bool is_full(cir_buf_t *self)
 {
-  if ((self->start_idx - self->end_idx) == 1)
-  {
-    printf("The buffer is full!\n");
-    return true;
-  }
-  else
-  {
-    return false;
-  }
+  return (self->start_idx == self->end_idx);
 }
 
 static bool is_empty(cir_buf_t *self)
 {
-  if ((self->start_idx == self->end_idx))
-  {
-    printf("The buffer is empty!\n");
-    return true;
-  }
-  else
-  {
-    return false;
-  }
+  return (self->curr_sz == EMPTY_BUF);
 }
 
 static bool push_data(cir_buf_t *self, int32_t input)
 {
-  if (is_full(self))
+  if (is_full(self) && self->curr_sz != EMPTY_BUF)
   {
+    printf("Buffer is full!\n");
     return false;
   }
   else
   {
-    printf("%s:%d\n", __func__, input);
     /* Add data */
     self->data[self->end_idx] = input;
     /* Increase address */
     self->end_idx = (self->end_idx + 1) % self->buf_sz;
-    printf("%s-end:%d\n", __func__, self->end_idx);
+    self->curr_sz++;
     return true;
   }
 }
@@ -72,13 +57,14 @@ static bool remove_last(cir_buf_t *self)
 {
   if (is_empty(self))
   {
+    printf("Buffer is empty!\n");
     return false;
   }
   else
   {
     /* Decrease address */
     self->end_idx = (self->end_idx + self->buf_sz -1) % self->buf_sz;
-
+    self->curr_sz--;
     return true;
   }
 }
@@ -88,6 +74,7 @@ static bool pop_data(cir_buf_t *self, int32_t *output)
   int32_t *data = output;
   if (is_empty(self))
   {
+    printf("Buffer is empty!\n");
     return false;
   }
   else
@@ -96,7 +83,7 @@ static bool pop_data(cir_buf_t *self, int32_t *output)
     *data = self->data[self->start_idx];
     /* Increase the start address */
     self->start_idx = (self->start_idx + 1) % self->buf_sz;
-    printf("%s-pop:%d\n", __func__, *data);
+    self->curr_sz--;
     return true;
   }
 }

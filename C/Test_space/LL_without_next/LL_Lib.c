@@ -53,7 +53,7 @@ void reverse_list(Node **head_in)
     Node *curr = *head_in;
     Node *prev = NULL, *next = NULL;
 
-    /* In case list just have 1 element*/
+    /* In case list just have only 1 element*/
     if (NULL == curr)
     {
         return;
