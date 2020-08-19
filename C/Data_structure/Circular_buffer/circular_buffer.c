@@ -1,6 +1,6 @@
 #include "circular_buffer.h"
 
-cir_buf_t *init_cir_buf(int32_t new_buf_size)
+static cir_buf_t *init_cir_buf(int32_t new_buf_size)
 {
     cir_buf_t *new_buf = (cir_buf_t *)malloc(sizeof(cir_buf_t));
 
@@ -24,33 +24,33 @@ cir_buf_t *init_cir_buf(int32_t new_buf_size)
     return new_buf;
 }
 
-bool is_full(cir_buf_t *self)
+static bool is_full(cir_buf_t *self)
 {
   if ((self->start_idx - self->end_idx) == 1)
   {
+    printf("The buffer is full!\n");
     return true;
   }
   else
   {
-    printf("The buffer is full!\n");
     return false;
   }
 }
 
-bool is_empty(cir_buf_t *self)
+static bool is_empty(cir_buf_t *self)
 {
   if ((self->start_idx == self->end_idx))
   {
+    printf("The buffer is empty!\n");
     return true;
   }
   else
   {
-    printf("The buffer is empty!\n");
     return false;
   }
 }
 
-bool push_data(cir_buf_t *self, int32_t input)
+static bool push_data(cir_buf_t *self, int32_t input)
 {
   if (is_full(self))
   {
@@ -58,16 +58,17 @@ bool push_data(cir_buf_t *self, int32_t input)
   }
   else
   {
+    printf("%s:%d\n", __func__, input);
     /* Add data */
     self->data[self->end_idx] = input;
     /* Increase address */
     self->end_idx = (self->end_idx + 1) % self->buf_sz;
-
+    printf("%s-end:%d\n", __func__, self->end_idx);
     return true;
   }
 }
 
-bool remove_last(cir_buf_t *self)
+static bool remove_last(cir_buf_t *self)
 {
   if (is_empty(self))
   {
@@ -82,7 +83,7 @@ bool remove_last(cir_buf_t *self)
   }
 }
 
-bool pop_data(cir_buf_t *self, int32_t *output)
+static bool pop_data(cir_buf_t *self, int32_t *output)
 {
   int32_t *data = output;
   if (is_empty(self))
@@ -95,13 +96,25 @@ bool pop_data(cir_buf_t *self, int32_t *output)
     *data = self->data[self->start_idx];
     /* Increase the start address */
     self->start_idx = (self->start_idx + 1) % self->buf_sz;
+    printf("%s-pop:%d\n", __func__, *data);
     return true;
   }
 }
 
-void deinit_cir_buf(cir_buf_t *buff)
+static void deinit_cir_buf(cir_buf_t *buff)
 {
   free(buff->data);
   free(buff);
   printf("The buffer is destroy!\n");
+}
+
+void config_cir_buf_handler(cir_buf_handler_t *handler, int32_t size)
+{
+  handler->init_cir_buf = init_cir_buf;
+  handler->deinit_cir_buf = deinit_cir_buf;
+  handler->pop_data = pop_data;
+  handler->push_data = push_data;
+  handler->remove_last = remove_last;
+
+  handler->buffer = handler->init_cir_buf(size);
 }
