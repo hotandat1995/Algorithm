@@ -7,12 +7,12 @@
 /* Command string */
 #define RELAY_1_ON "turn on relay one"
 #define RELAY_1_OFF "turn off relay one"
-// #define RELAY_2_ON  "turn on relay one"
-// #define RELAY_2_OFF "turn off relay one"
-// #define RELAY_3_ON  "turn on relay one"
-// #define RELAY_3_OFF "turn off relay one"
-// #define RELAY_4_ON  "turn on relay one"
-// #define RELAY_4_OFF "turn off relay one"
+#define RELAY_2_ON  "turn on relay two"
+#define RELAY_2_OFF "turn off relay two"
+#define RELAY_3_ON  "turn on relay three"
+#define RELAY_3_OFF "turn off relay three"
+#define RELAY_4_ON  "turn on relay four"
+#define RELAY_4_OFF "turn off relay four"
 
 /*================================================================================================*/
 /* Biến global */
@@ -73,7 +73,7 @@ void loop()
   send_data_to_server();
 
   /* Delay 500 ms */
-  delay(500);
+  delay(100);
 }
 
 /*================================================================================================*/
@@ -97,6 +97,8 @@ bool check_pc_command()
       {
         command_buff[cmd_buf_idx] = '\0';
         cmd_buf_idx = 0;
+        Serial.print("[INFO] Input string: ");
+        Serial.println(command_buff);
         strcpy(compare_buff, command_buff);
         return true;
       }
@@ -108,6 +110,7 @@ bool check_pc_command()
 /* Hàm kiểm tra xem lệnh gửi xuống có hợp lệ hay không và cập nhật lại bảng relay status */
 void check_and_update_cmd_list()
 {
+  // Update trạng thái relay 1
   if (strcmp(RELAY_1_ON, compare_buff) == 0)
   {
     relay_status[0] = ON;
@@ -118,7 +121,39 @@ void check_and_update_cmd_list()
     relay_status[0] = OFF;
     relay_status_string[0] = '0';
   }
-  /* Thêm vào cho các relay khác */
+  // Update trạng thái relay 2
+  if (strcmp(RELAY_2_ON, compare_buff) == 0)
+  {
+    relay_status[1] = ON;
+    relay_status_string[1] = '1';
+  }
+  if (strcmp(RELAY_2_OFF, compare_buff) == 0)
+  {
+    relay_status[1] = OFF;
+    relay_status_string[1] = '0';
+  }
+  // Update trạng thái relay 3
+  if (strcmp(RELAY_3_ON, compare_buff) == 0)
+  {
+    relay_status[2] = ON;
+    relay_status_string[2] = '1';
+  }
+  if (strcmp(RELAY_3_OFF, compare_buff) == 0)
+  {
+    relay_status[2] = OFF;
+    relay_status_string[2] = '0';
+  }
+  // Update trạng thái relay 4
+  if (strcmp(RELAY_4_ON, compare_buff) == 0)
+  {
+    relay_status[3] = ON;
+    relay_status_string[3] = '1';
+  }
+  if (strcmp(RELAY_4_OFF, compare_buff) == 0)
+  {
+    relay_status[3] = OFF;
+    relay_status_string[3] = '0';
+  }
 }
 
 /* Hàm truyền command đến server */
@@ -153,7 +188,7 @@ void send_data_to_server()
   unsigned long timeout = millis();
   while (client.available() == 0)
   {
-    if (millis() - timeout > 5000)
+    if (millis() - timeout > 500)
     {
       Serial.println(">>> Client Timeout !");
       client.stop();

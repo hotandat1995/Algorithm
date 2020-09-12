@@ -5,10 +5,10 @@
 #define ON 1
 #define OFF 0
 /* Đặt tên các chân*/
-#define RELAY_1_PIN
-#define RELAY_2_PIN
-#define RELAY_3_PIN
-#define RELAY_4_PIN
+#define RELAY_1_PIN 5
+#define RELAY_2_PIN 4
+#define RELAY_3_PIN 14
+#define RELAY_4_PIN 12
 
 /*================================================================================================*/
 /* Biến global */
@@ -44,15 +44,15 @@ void setup()
 
   /* Khởi tạo các chân I/O để control các relay */
   pinMode(RELAY_1_PIN, OUTPUT);   // set pin to output
-  digitalWrite(RELAY_1_PIN, LOW); // turn off pullup resistors
+  digitalWrite(RELAY_1_PIN, HIGH); // turn off pullup resistors
   pinMode(RELAY_2_PIN, OUTPUT);   // set pin to output
-  digitalWrite(RELAY_2_PIN, LOW); // turn off pullup resistors
+  digitalWrite(RELAY_2_PIN, HIGH); // turn off pullup resistors
   pinMode(RELAY_3_PIN, OUTPUT);   // set pin to output
-  digitalWrite(RELAY_3_PIN, LOW); // turn off pullup resistors
+  digitalWrite(RELAY_3_PIN, HIGH); // turn off pullup resistors
   pinMode(RELAY_4_PIN, OUTPUT);   // set pin to output
-  digitalWrite(RELAY_4_PIN, LOW); // turn off pullup resistors
+  digitalWrite(RELAY_4_PIN, HIGH); // turn off pullup resistors
 
-  delay(500);
+  delay(100);
 }
 
 /*================================================================================================*/
@@ -80,25 +80,25 @@ void handleSentVar()
     /* Cập nhật lại trạng thái của các relay */
     /*========================================================================*/
     /* Relay 1*/
-    if (readingToPrint[0] == '1')
+    if (readingToPrint[0] != '1')
       digitalWrite(RELAY_1_PIN, HIGH);
     else
       digitalWrite(RELAY_1_PIN, LOW);
 
     /* Relay 2*/
-    if (readingToPrint[1] == '1')
+    if (readingToPrint[1] != '1')
       digitalWrite(RELAY_2_PIN, HIGH);
     else
       digitalWrite(RELAY_2_PIN, LOW);
 
     /* Relay 3*/
-    if (readingToPrint[2] == '1')
+    if (readingToPrint[2] != '1')
       digitalWrite(RELAY_3_PIN, HIGH);
     else
       digitalWrite(RELAY_3_PIN, LOW);
 
     /* Relay 4*/
-    if (readingToPrint[3] == '1')
+    if (readingToPrint[3] != '1')
       digitalWrite(RELAY_4_PIN, HIGH);
     else
       digitalWrite(RELAY_4_PIN, LOW);
