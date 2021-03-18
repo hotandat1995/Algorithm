@@ -2,11 +2,11 @@ m255
 K3
 13
 cModel Technology
-Z0 dD:\Work_Place\Thesis_FPGA\simulation\modelsim
+Z0 dD:\Work_Place\Practice_space\Practice_SP\Verilog\Thesis_FPGA_Traffic_Light\simulation\modelsim
 vDen_Giao_Thong
-I;MB;5LdPi[MZJn_E;?Y<R1
+IFKl=[fKR16CQLnWgB;zQV1
 VOg<Nb?Gfk3HU61Za7OFlH0
-w1616075159
+w1616082248
 8Den_Giao_Thong.vo
 FDen_Giao_Thong.vo
 L0 31
@@ -15,18 +15,18 @@ r1
 31
 o-vlog01compat -work work +incdir+. -O0
 n@den_@giao_@thong
-!s100 f>Q8nOjGY>JIfCXGTaf:22
+!s100 2_cRFfcZ`6EElR>7@[S9k1
 !s85 0
 vtb_traffic_light
-!s100 8MKQ24R24eR^`:D;GIVW`3
-IeT4HfmQWd]>NEmS2dClII0
+!s100 NQ5<jIXfl7hQ80S8h>CVP2
+I;;1CYL1YDH;]IgNNGWZom0
 VGf`InbJE@G5lOi0:367`Y3
-w1616075137
-8D:/Work_Place/Thesis_FPGA/tb_traffic_light.v
-FD:/Work_Place/Thesis_FPGA/tb_traffic_light.v
+w1616082227
+8D:/Work_Place/Practice_space/Practice_SP/Verilog/Thesis_FPGA_Traffic_Light/tb_traffic_light.v
+FD:/Work_Place/Practice_space/Practice_SP/Verilog/Thesis_FPGA_Traffic_Light/tb_traffic_light.v
 L0 8
 R1
 r1
 !s85 0
 31
-o-vlog01compat -work work +incdir+D:/Work_Place/Thesis_FPGA -O0
+o-vlog01compat -work work +incdir+D:/Work_Place/Practice_space/Practice_SP/Verilog/Thesis_FPGA_Traffic_Light -O0

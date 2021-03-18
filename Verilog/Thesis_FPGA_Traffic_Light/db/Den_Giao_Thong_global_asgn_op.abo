@@ -30,7 +30,7 @@ Chip Device Options:
 ****************************
 
 - ATOM ------------------------
-	ATOM_NAME: time_counter:cnt|clk_counter[2] -- NON-UNIQUE
+	ATOM_NAME: time_counter:cnt|clk_counter[4] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 0
 	Atom Type: cycloneii_lcell_ff (WYSIWYG)
@@ -39,14 +39,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [DATAIN]	  time_counter:cnt|clk_counter[2]~28	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  time_counter:cnt|clk_counter[4]~32	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
-		4: [SCLR]	  time_counter:cnt|clk_counter[7]~30	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [SCLR]	  time_counter:cnt|clk_counter[6]~34	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		5: NO ITERM
 		6: [ENA]	DISCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	time_counter:cnt|clk_counter[2]	LIT INDEX 0 FANOUTS 2 REGED POS
+		0: [REGOUT]	time_counter:cnt|clk_counter[4]	LIT INDEX 0 FANOUTS 2 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -65,7 +65,7 @@ Chip Device Options:
 		1: [DATAIN]	  time_counter:cnt|clk_counter[5]~35	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
-		4: [SCLR]	  time_counter:cnt|clk_counter[7]~30	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [SCLR]	  time_counter:cnt|clk_counter[6]~34	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		5: NO ITERM
 		6: [ENA]	DISCONNECTED
 	OUTPUTS (Int. Connections):
@@ -88,7 +88,7 @@ Chip Device Options:
 		1: [DATAIN]	  time_counter:cnt|clk_counter[6]~37	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
-		4: [SCLR]	  time_counter:cnt|clk_counter[7]~30	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [SCLR]	  time_counter:cnt|clk_counter[6]~34	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		5: NO ITERM
 		6: [ENA]	DISCONNECTED
 	OUTPUTS (Int. Connections):
@@ -111,7 +111,7 @@ Chip Device Options:
 		1: [DATAIN]	  time_counter:cnt|clk_counter[7]~39	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
-		4: [SCLR]	  time_counter:cnt|clk_counter[7]~30	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [SCLR]	  time_counter:cnt|clk_counter[6]~34	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		5: NO ITERM
 		6: [ENA]	DISCONNECTED
 	OUTPUTS (Int. Connections):
@@ -122,7 +122,7 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: time_counter:cnt|clk_counter[4] -- NON-UNIQUE
+	ATOM_NAME: time_counter:cnt|clk_counter[1] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 4
 	Atom Type: cycloneii_lcell_ff (WYSIWYG)
@@ -131,14 +131,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [DATAIN]	  time_counter:cnt|clk_counter[4]~33	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  time_counter:cnt|clk_counter[1]~26	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
-		4: [SCLR]	  time_counter:cnt|clk_counter[7]~30	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [SCLR]	  time_counter:cnt|clk_counter[6]~34	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		5: NO ITERM
 		6: [ENA]	DISCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	time_counter:cnt|clk_counter[4]	LIT INDEX 0 FANOUTS 4 REGED POS
+		0: [REGOUT]	time_counter:cnt|clk_counter[1]	LIT INDEX 0 FANOUTS 4 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -157,18 +157,18 @@ Chip Device Options:
 		1: [DATAIN]	  time_counter:cnt|clk_counter[0]~24	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
-		4: [SCLR]	  time_counter:cnt|clk_counter[7]~30	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [SCLR]	  time_counter:cnt|clk_counter[6]~34	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		5: NO ITERM
 		6: [ENA]	DISCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	time_counter:cnt|clk_counter[0]	LIT INDEX 0 FANOUTS 4 REGED POS
+		0: [REGOUT]	time_counter:cnt|clk_counter[0]	LIT INDEX 0 FANOUTS 3 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: time_counter:cnt|clk_counter[3] -- NON-UNIQUE
+	ATOM_NAME: time_counter:cnt|clk_counter[2] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 6
 	Atom Type: cycloneii_lcell_ff (WYSIWYG)
@@ -177,21 +177,21 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [DATAIN]	  time_counter:cnt|clk_counter[3]~31	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  time_counter:cnt|clk_counter[2]~28	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
-		4: [SCLR]	  time_counter:cnt|clk_counter[7]~30	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [SCLR]	  time_counter:cnt|clk_counter[6]~34	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		5: NO ITERM
 		6: [ENA]	DISCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	time_counter:cnt|clk_counter[3]	LIT INDEX 0 FANOUTS 3 REGED POS
+		0: [REGOUT]	time_counter:cnt|clk_counter[2]	LIT INDEX 0 FANOUTS 3 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
 
 
 - ATOM ------------------------
-	ATOM_NAME: time_counter:cnt|clk_counter[1] -- NON-UNIQUE
+	ATOM_NAME: time_counter:cnt|clk_counter[3] -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 7
 	Atom Type: cycloneii_lcell_ff (WYSIWYG)
@@ -200,14 +200,14 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [CLK]	  clk	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		1: [DATAIN]	  time_counter:cnt|clk_counter[1]~26	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAIN]	  time_counter:cnt|clk_counter[3]~30	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
-		4: [SCLR]	  time_counter:cnt|clk_counter[7]~30	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [SCLR]	  time_counter:cnt|clk_counter[6]~34	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		5: NO ITERM
 		6: [ENA]	DISCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [REGOUT]	time_counter:cnt|clk_counter[1]	LIT INDEX 0 FANOUTS 3 REGED POS
+		0: [REGOUT]	time_counter:cnt|clk_counter[3]	LIT INDEX 0 FANOUTS 4 REGED POS
 
 	PARAMETER LIST:
 		EMPTY!!
@@ -277,7 +277,7 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: time_counter:cnt|clk_counter[3]~31 -- NON-UNIQUE
+	ATOM_NAME: time_counter:cnt|clk_counter[3]~30 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 11
 	Atom Type: cycloneii_lcell_comb (WYSIWYG)
@@ -289,8 +289,8 @@ Chip Device Options:
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: [CIN]	  time_counter:cnt|clk_counter[2]~29	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	time_counter:cnt|clk_counter[3]~31	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	time_counter:cnt|clk_counter[3]~32	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	time_counter:cnt|clk_counter[3]~30	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	time_counter:cnt|clk_counter[3]~31	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -298,7 +298,7 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: time_counter:cnt|clk_counter[4]~33 -- NON-UNIQUE
+	ATOM_NAME: time_counter:cnt|clk_counter[4]~32 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 12
 	Atom Type: cycloneii_lcell_comb (WYSIWYG)
@@ -308,10 +308,10 @@ Chip Device Options:
 		1: NO ITERM
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  time_counter:cnt|clk_counter[3]~32	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  time_counter:cnt|clk_counter[3]~31	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	time_counter:cnt|clk_counter[4]~33	LIT INDEX 0 FANOUTS 1
-		1: [COUT]	time_counter:cnt|clk_counter[4]~34	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	time_counter:cnt|clk_counter[4]~32	LIT INDEX 0 FANOUTS 1
+		1: [COUT]	time_counter:cnt|clk_counter[4]~33	LIT INDEX 0 FANOUTS 1
 
 	PARAMETER LIST:
 		sum_lutc_input                 = cin
@@ -329,7 +329,7 @@ Chip Device Options:
 		1: NO ITERM
 		2: NO ITERM
 		3: [DATAD]	  VCC	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		4: [CIN]	  time_counter:cnt|clk_counter[4]~34	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		4: [CIN]	  time_counter:cnt|clk_counter[4]~33	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	time_counter:cnt|clk_counter[5]~35	LIT INDEX 0 FANOUTS 1
 		1: [COUT]	time_counter:cnt|clk_counter[5]~36	LIT INDEX 0 FANOUTS 1
@@ -604,7 +604,7 @@ Chip Device Options:
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  time_counter:cnt|clk_counter[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  time_counter:cnt|clk_counter[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  time_counter:cnt|clk_counter[5]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: [DATAC]	  time_counter:cnt|clk_counter[6]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		3: [DATAD]	  time_counter:cnt|clk_counter[7]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
@@ -615,7 +615,7 @@ Chip Device Options:
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 0002
+		lut_mask                       = 0001
 
 
 - ATOM ------------------------
@@ -625,10 +625,10 @@ Chip Device Options:
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  fsm:fsm|current_state[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  fsm:fsm|current_state[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  fsm:fsm|current_state[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  time_counter:cnt|clk_counter[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  time_counter:cnt|clk_counter[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  fsm:fsm|current_state[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  fsm:fsm|current_state[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  fsm:fsm|current_state[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	time_counter:cnt|r_end~1	LIT INDEX 0 FANOUTS 1
@@ -636,11 +636,11 @@ Chip Device Options:
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 0018
+		lut_mask                       = 0280
 
 
 - ATOM ------------------------
-	ATOM_NAME: time_counter:cnt|y_end~2 -- NON-UNIQUE
+	ATOM_NAME: time_counter:cnt|r_end~2 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 37
 	Atom Type: cycloneii_lcell_comb
@@ -648,11 +648,11 @@ Chip Device Options:
 	INPUTS (Driven By):
 		0: NO ITERM
 		1: NO ITERM
-		2: [DATAC]	  time_counter:cnt|clk_counter[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  time_counter:cnt|clk_counter[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  time_counter:cnt|clk_counter[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  time_counter:cnt|clk_counter[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	time_counter:cnt|y_end~2	LIT INDEX 0 FANOUTS 2
+		0: [COMBOUT]	time_counter:cnt|r_end~2	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
@@ -661,24 +661,24 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: time_counter:cnt|r_end~2 -- NON-UNIQUE
+	ATOM_NAME: time_counter:cnt|r_end~3 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 38
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
 		0: [DATAA]	  time_counter:cnt|y_end~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  time_counter:cnt|clk_counter[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  time_counter:cnt|r_end~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  time_counter:cnt|y_end~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  time_counter:cnt|r_end~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  time_counter:cnt|r_end~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  time_counter:cnt|clk_counter[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	time_counter:cnt|r_end~2	LIT INDEX 0 FANOUTS 4
+		0: [COMBOUT]	time_counter:cnt|r_end~3	LIT INDEX 0 FANOUTS 4
 		1: NONE
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 8000
+		lut_mask                       = 0080
 
 
 - ATOM ------------------------
@@ -691,7 +691,7 @@ Chip Device Options:
 		0: [DATAA]	  fsm:fsm|current_state[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  rst_n	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 		2: [DATAC]	  fsm:fsm|current_state~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  time_counter:cnt|r_end~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  time_counter:cnt|r_end~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	fsm:fsm|current_state~5	LIT INDEX 0 FANOUTS 1
@@ -731,17 +731,17 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [DATAA]	  time_counter:cnt|clk_counter[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  time_counter:cnt|clk_counter[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  time_counter:cnt|clk_counter[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: NO ITERM
 		3: NO ITERM
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	time_counter:cnt|g_end~2	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	time_counter:cnt|g_end~2	LIT INDEX 0 FANOUTS 2
 		1: NONE
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 2222
+		lut_mask                       = 8888
 
 
 - ATOM ------------------------
@@ -829,45 +829,45 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: time_counter:cnt|y_end~3 -- NON-UNIQUE
+	ATOM_NAME: time_counter:cnt|y_end~2 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 47
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  time_counter:cnt|clk_counter[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  time_counter:cnt|clk_counter[4]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  fsm:fsm|current_state[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  fsm:fsm|current_state[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  fsm:fsm|current_state[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  fsm:fsm|current_state[0]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  fsm:fsm|current_state[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  time_counter:cnt|clk_counter[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	time_counter:cnt|y_end~3	LIT INDEX 0 FANOUTS 1
+		0: [COMBOUT]	time_counter:cnt|y_end~2	LIT INDEX 0 FANOUTS 1
 		1: NONE
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 0220
+		lut_mask                       = 0006
 
 
 - ATOM ------------------------
-	ATOM_NAME: time_counter:cnt|y_end~4 -- NON-UNIQUE
+	ATOM_NAME: time_counter:cnt|y_end~3 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 48
 	Atom Type: cycloneii_lcell_comb
 
 	INPUTS (Driven By):
-		0: [DATAA]	  time_counter:cnt|y_end~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  fsm:fsm|current_state[1]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  time_counter:cnt|y_end~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  time_counter:cnt|y_end~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		0: [DATAA]	  time_counter:cnt|clk_counter[3]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  time_counter:cnt|y_end~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  time_counter:cnt|y_end~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  time_counter:cnt|g_end~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	time_counter:cnt|y_end~4	LIT INDEX 0 FANOUTS 4
+		0: [COMBOUT]	time_counter:cnt|y_end~3	LIT INDEX 0 FANOUTS 4
 		1: NONE
 
 	PARAMETER LIST:
 		sum_lutc_input                 = datac
-		lut_mask                       = 2000
+		lut_mask                       = 4000
 
 
 - ATOM ------------------------
@@ -879,7 +879,7 @@ Chip Device Options:
 	INPUTS (Driven By):
 		0: [DATAA]	  fsm:fsm|current_state~8	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  fsm:fsm|current_state~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  time_counter:cnt|y_end~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  time_counter:cnt|y_end~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		3: [DATAD]	  rst_n	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
@@ -901,7 +901,7 @@ Chip Device Options:
 		0: [DATAA]	  fsm:fsm|current_state~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  rst_n	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 		2: [DATAC]	  fsm:fsm|current_state[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  time_counter:cnt|y_end~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  time_counter:cnt|y_end~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	fsm:fsm|current_state~10	LIT INDEX 0 FANOUTS 1
@@ -943,7 +943,7 @@ Chip Device Options:
 		0: [DATAA]	  fsm:fsm|current_state[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  fsm:fsm|current_state~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: [DATAC]	  rst_n	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		3: [DATAD]	  time_counter:cnt|r_end~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  time_counter:cnt|r_end~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	fsm:fsm|current_state~12	LIT INDEX 0 FANOUTS 1
@@ -1004,7 +1004,7 @@ Chip Device Options:
 
 	INPUTS (Driven By):
 		0: [DATAA]	  fsm:fsm|current_state[2]	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		1: [DATAB]	  time_counter:cnt|r_end~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		1: [DATAB]	  time_counter:cnt|r_end~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: [DATAC]	  fsm:fsm|current_state~14	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		3: [DATAD]	  fsm:fsm|current_state~6	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
@@ -1027,7 +1027,7 @@ Chip Device Options:
 		0: [DATAA]	  fsm:fsm|current_state~15	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		1: [DATAB]	  fsm:fsm|Equal0~1	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		2: [DATAC]	  rst_n	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
-		3: [DATAD]	  time_counter:cnt|y_end~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  time_counter:cnt|y_end~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
 		0: [COMBOUT]	fsm:fsm|current_state~16	LIT INDEX 0 FANOUTS 1
@@ -1060,7 +1060,7 @@ Chip Device Options:
 
 
 - ATOM ------------------------
-	ATOM_NAME: time_counter:cnt|clk_counter[7]~30 -- NON-UNIQUE
+	ATOM_NAME: time_counter:cnt|clk_counter[6]~34 -- NON-UNIQUE
 	Atom Hier Name: 
 	Atom Id: 58
 	Atom Type: cycloneii_lcell_comb
@@ -1068,11 +1068,11 @@ Chip Device Options:
 	INPUTS (Driven By):
 		0: [DATAA]	  rst_n	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:CONNECTED,NONE
 		1: [DATAB]	  time_counter:cnt|g_end~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		2: [DATAC]	  time_counter:cnt|r_end~2	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
-		3: [DATAD]	  time_counter:cnt|y_end~4	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		2: [DATAC]	  time_counter:cnt|r_end~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
+		3: [DATAD]	  time_counter:cnt|y_end~3	LIT INDEX 0	GLOBAL:DONT_CARE	DELAY_CHAIN:UNCONNECTED
 		4: NO ITERM
 	OUTPUTS (Int. Connections):
-		0: [COMBOUT]	time_counter:cnt|clk_counter[7]~30	LIT INDEX 0 FANOUTS 8
+		0: [COMBOUT]	time_counter:cnt|clk_counter[6]~34	LIT INDEX 0 FANOUTS 8
 		1: NONE
 
 	PARAMETER LIST:

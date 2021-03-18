@@ -38,8 +38,26 @@ module tb_traffic_light;
         .rst_n              (rst_n)                 ///< Chan reset
     );
 
-    integer index;              ///< So luong lan lap lai
+    integer counter_data;        ///< Dung de luu gia tri mo file
+    integer index;               ///< So luong lan lap lai
     parameter DURATION = 1000;   ///< Thoi gian lap 100 chu ki
+
+    // Open csv-file de write data vao
+    initial
+    begin
+        counter_data = $fopen("D:/Work_Place/Practice_space/Practice_SP/Verilog/Thesis_FPGA_Traffic_Light/output_file/counter_output.csv"); // Open file
+    end
+
+    always @(posedge clk)
+    begin
+        if (DURATION == index)
+        begin
+            $stop;                  ///< Dung simulate
+            $fclose(counter_data);  ///< Close file
+        end
+        // index = index + 1;
+    end
+
     // Khoi dong pin clock
     initial
     begin
@@ -48,7 +66,8 @@ module tb_traffic_light;
         begin
             #10             ///< Doi 10 chu ki
             clk = !clk;     ///< Dao gia tri cua clock
-            $display("%5d,%3b,%1b,%3b,%1b", index, street_a, street_a_pri_lamp, street_b, street_b_pri_lamp);
+            // $display("%5d,%3b,%1b,%3b,%1b", index, street_a, street_a_pri_lamp, street_b, street_b_pri_lamp);
+            $fdisplay(counter_data,"%d,%d,%d,%d,%b", index, street_a, street_a_pri_lamp, street_b, street_b_pri_lamp);
         end
     end
 

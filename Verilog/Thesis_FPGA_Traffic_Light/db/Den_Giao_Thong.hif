@@ -168,56 +168,6 @@ fsm:fsm
 
 # end
 # entity
-time_counter
-# storage
-db|Den_Giao_Thong.(4).cnf
-db|Den_Giao_Thong.(4).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-time_counter.v
-1626f1672d0b1d8a9cbf75f029b7f8
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# user_parameter {
-GREEN_TIME
-15
-PARAMETER_SIGNED_DEC
-DEF
-YELLOW_TIME
-5
-PARAMETER_SIGNED_DEC
-DEF
-RED_TIME
-20
-PARAMETER_SIGNED_DEC
-DEF
-}
-# hierarchies {
-time_counter:cnt
-}
-# macro_sequence
-
-# end
-# entity
 Den_Giao_Thong
 # storage
 db|Den_Giao_Thong.(3).cnf
@@ -249,6 +199,56 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+time_counter
+# storage
+db|Den_Giao_Thong.(4).cnf
+db|Den_Giao_Thong.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+time_counter.v
+4eca3cceebf7f90532e60ee9eb529ee
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+GREEN_TIME
+15
+PARAMETER_SIGNED_DEC
+DEF
+YELLOW_TIME
+5
+PARAMETER_SIGNED_DEC
+DEF
+RED_TIME
+2
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+time_counter:cnt
 }
 # macro_sequence
 

@@ -17,7 +17,7 @@ module time_counter
 // Dinh nghia
 parameter GREEN_TIME  = 15;     ///< Thoi gian cua den xanh
 parameter YELLOW_TIME = 5;      ///< Thoi gian cua den vang
-parameter RED_TIME    = 20;     ///< Thoi gian cua den do
+parameter RED_TIME    = 2;     ///< Thoi gian cua den do
 
 /* Interface */
 // INPUT
