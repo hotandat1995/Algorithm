@@ -1,0 +1,32 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Work_Place\Thesis_FPGA\simulation\modelsim
+vDen_Giao_Thong
+I;MB;5LdPi[MZJn_E;?Y<R1
+VOg<Nb?Gfk3HU61Za7OFlH0
+w1616075159
+8Den_Giao_Thong.vo
+FDen_Giao_Thong.vo
+L0 31
+Z1 OV;L;6.4a;39
+r1
+31
+o-vlog01compat -work work +incdir+. -O0
+n@den_@giao_@thong
+!s100 f>Q8nOjGY>JIfCXGTaf:22
+!s85 0
+vtb_traffic_light
+!s100 8MKQ24R24eR^`:D;GIVW`3
+IeT4HfmQWd]>NEmS2dClII0
+VGf`InbJE@G5lOi0:367`Y3
+w1616075137
+8D:/Work_Place/Thesis_FPGA/tb_traffic_light.v
+FD:/Work_Place/Thesis_FPGA/tb_traffic_light.v
+L0 8
+R1
+r1
+!s85 0
+31
+o-vlog01compat -work work +incdir+D:/Work_Place/Thesis_FPGA -O0

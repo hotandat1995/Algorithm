@@ -72,7 +72,7 @@ void handleSentVar()
   {
     // This is the variable sent from the client
     int readingInt = server.arg("command_from_pc").toInt();
-    char readingToPrint[5]; //Buffer đùng để chứa string convert
+    char readingToPrint[6]; //Buffer đùng để chứa string convert
 
     /* Convert giá trị nhận được từ request từ integer sang string */
     itoa(readingInt, readingToPrint, 10);
@@ -80,25 +80,25 @@ void handleSentVar()
     /* Cập nhật lại trạng thái của các relay */
     /*========================================================================*/
     /* Relay 1*/
-    if (readingToPrint[0] != '1')
+    if (readingToPrint[1] != '1')
       digitalWrite(RELAY_1_PIN, HIGH);
     else
       digitalWrite(RELAY_1_PIN, LOW);
 
     /* Relay 2*/
-    if (readingToPrint[1] != '1')
+    if (readingToPrint[2] != '1')
       digitalWrite(RELAY_2_PIN, HIGH);
     else
       digitalWrite(RELAY_2_PIN, LOW);
 
     /* Relay 3*/
-    if (readingToPrint[2] != '1')
+    if (readingToPrint[3] != '1')
       digitalWrite(RELAY_3_PIN, HIGH);
     else
       digitalWrite(RELAY_3_PIN, LOW);
 
     /* Relay 4*/
-    if (readingToPrint[3] != '1')
+    if (readingToPrint[4] != '1')
       digitalWrite(RELAY_4_PIN, HIGH);
     else
       digitalWrite(RELAY_4_PIN, LOW);

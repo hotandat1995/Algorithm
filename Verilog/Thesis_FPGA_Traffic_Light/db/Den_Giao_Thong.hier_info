@@ -1,0 +1,74 @@
+|Den_Giao_Thong
+street_a[0] <= fsm:fsm.street_a
+street_a[1] <= fsm:fsm.street_a
+street_a[2] <= fsm:fsm.street_a
+street_a_pri_lamp <= fsm:fsm.street_a_pri_lamp
+street_b[0] <= fsm:fsm.street_b
+street_b[1] <= fsm:fsm.street_b
+street_b[2] <= fsm:fsm.street_b
+street_b_pri_lamp <= fsm:fsm.street_b_pri_lamp
+rst_n => rst_n~0.IN2
+clk => clk~0.IN2
+
+
+|Den_Giao_Thong|time_counter:cnt
+g_end <= g_end~0.DB_MAX_OUTPUT_PORT_TYPE
+y_end <= y_end~0.DB_MAX_OUTPUT_PORT_TYPE
+r_end <= r_end~0.DB_MAX_OUTPUT_PORT_TYPE
+clk => clk_counter[7].CLK
+clk => clk_counter[6].CLK
+clk => clk_counter[5].CLK
+clk => clk_counter[4].CLK
+clk => clk_counter[3].CLK
+clk => clk_counter[2].CLK
+clk => clk_counter[1].CLK
+clk => clk_counter[0].CLK
+rst_n => clk_counter~15.OUTPUTSELECT
+rst_n => clk_counter~14.OUTPUTSELECT
+rst_n => clk_counter~13.OUTPUTSELECT
+rst_n => clk_counter~12.OUTPUTSELECT
+rst_n => clk_counter~11.OUTPUTSELECT
+rst_n => clk_counter~10.OUTPUTSELECT
+rst_n => clk_counter~9.OUTPUTSELECT
+rst_n => clk_counter~8.OUTPUTSELECT
+fsm_g => g_end~0.IN1
+fsm_r => r_end~0.IN1
+fsm_y => y_end~0.IN1
+
+
+|Den_Giao_Thong|fsm:fsm
+street_a[0] <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+street_a[1] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+street_a[2] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+street_a_pri_lamp <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+street_b[0] <= WideNor1.DB_MAX_OUTPUT_PORT_TYPE
+street_b[1] <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
+street_b[2] <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+street_b_pri_lamp <= WideNor1.DB_MAX_OUTPUT_PORT_TYPE
+fsm_g <= fsm_g~0.DB_MAX_OUTPUT_PORT_TYPE
+fsm_y <= fsm_y~0.DB_MAX_OUTPUT_PORT_TYPE
+fsm_r <= fsm_r~0.DB_MAX_OUTPUT_PORT_TYPE
+clk => current_state[2].CLK
+clk => current_state[1].CLK
+clk => current_state[0].CLK
+rst_n => current_state~2.OUTPUTSELECT
+rst_n => current_state~1.OUTPUTSELECT
+rst_n => current_state~0.OUTPUTSELECT
+g_end => next_state~9.OUTPUTSELECT
+g_end => next_state~8.OUTPUTSELECT
+g_end => next_state~7.OUTPUTSELECT
+g_end => next_state~1.OUTPUTSELECT
+g_end => next_state~0.OUTPUTSELECT
+y_end => next_state~12.OUTPUTSELECT
+y_end => next_state~11.OUTPUTSELECT
+y_end => next_state~10.OUTPUTSELECT
+y_end => next_state~4.OUTPUTSELECT
+y_end => next_state~3.OUTPUTSELECT
+y_end => next_state~2.OUTPUTSELECT
+r_end => next_state~15.OUTPUTSELECT
+r_end => next_state~14.OUTPUTSELECT
+r_end => next_state~13.OUTPUTSELECT
+r_end => next_state~6.OUTPUTSELECT
+r_end => next_state~5.OUTPUTSELECT
+
+

@@ -1,18 +1,19 @@
 #include <ESP8266WiFi.h>
+#include <SoftwareSerial.h>
 
 #define COMMAND_BUFF_SIZE 100
 #define NUMBER_OF_RELAY 4
 #define ON 1
 #define OFF 0
 /* Command string */
-#define RELAY_1_ON "turn on relay one"
-#define RELAY_1_OFF "turn off relay one"
-#define RELAY_2_ON  "turn on relay two"
-#define RELAY_2_OFF "turn off relay two"
-#define RELAY_3_ON  "turn on relay three"
-#define RELAY_3_OFF "turn off relay three"
-#define RELAY_4_ON  "turn on relay four"
-#define RELAY_4_OFF "turn off relay four"
+#define RELAY_1_ON "turn on one"
+#define RELAY_1_OFF "turn off one"
+#define RELAY_2_ON  "turn on three"
+#define RELAY_2_OFF "turn off three"
+#define RELAY_3_ON  "turn on ten"
+#define RELAY_3_OFF "turn off ten"
+#define RELAY_4_ON  "turn on nine"
+#define RELAY_4_OFF "turn off nine"
 
 /*================================================================================================*/
 /* Biến global */
@@ -20,13 +21,16 @@
 const char *ssid = "ThinhHome";     // Tên Wifi
 const char *password = "123456789"; // Mật khẩu Wifi
 
+// Mở 1 software serial để giao tiếp với máy tính
+SoftwareSerial PC_Serial(14, 12, false, 128);
+
 /* Phần lưu các trạng thái của command từ PC */
 char command_buff[COMMAND_BUFF_SIZE];                   // Nơi chứa tin nhắn của PC gửi xuống
 uint16_t cmd_buf_idx = 0;                               // Biến chứa index của buffer
 char compare_buff[COMMAND_BUFF_SIZE];                   // Nơi chứa command nhận được, dùng để
                                                         // compare với các lệnh điều khiển
 bool relay_status[NUMBER_OF_RELAY] = {0};               // Nơi chứa trạng thái các relay điều khiển
-char relay_status_string[NUMBER_OF_RELAY + 1] = "0000"; // Nơi chưa string của relay status
+char relay_status_string[NUMBER_OF_RELAY + 2] = "10000"; // Nơi chưa string của relay status
 
 /*================================================================================================*/
 /* Khai báo Prototype */
@@ -38,7 +42,11 @@ void check_and_update_cmd_list();
 /* Setup phần cứng trước khi vào vòng lặp*/
 void setup()
 {
+  /* Mở cổng serial USB */
   Serial.begin(115200);
+  delay(1000);
+  /* Mở cổng serial bằng CP2102 */
+  PC_Serial.begin(9600);
   delay(1000);
 
   Serial.println("Connecting to server\n");
@@ -82,13 +90,13 @@ void loop()
 /* Hàm check tin nhắn gửi đến từ máy tính */
 bool check_pc_command()
 {
-  if (Serial.available() > 0)
+  if (PC_Serial.available() > 0)
   {
-    while (Serial.available() > 0)
+    while (PC_Serial.available() > 0)
     {
-      char temp = Serial.read();
+      char temp = PC_Serial.read();
       /* Khi không phải là kí tự kết thúc chuỗi thì dồn kí tự vào mảng */
-      if (temp != '\r')
+      if (temp != 0x0A)
       {
         command_buff[cmd_buf_idx++] = temp;
       }
@@ -113,46 +121,46 @@ void check_and_update_cmd_list()
   // Update trạng thái relay 1
   if (strcmp(RELAY_1_ON, compare_buff) == 0)
   {
-    relay_status[0] = ON;
-    relay_status_string[0] = '1';
-  }
-  if (strcmp(RELAY_1_OFF, compare_buff) == 0)
-  {
-    relay_status[0] = OFF;
-    relay_status_string[0] = '0';
-  }
-  // Update trạng thái relay 2
-  if (strcmp(RELAY_2_ON, compare_buff) == 0)
-  {
     relay_status[1] = ON;
     relay_status_string[1] = '1';
   }
-  if (strcmp(RELAY_2_OFF, compare_buff) == 0)
+  if (strcmp(RELAY_1_OFF, compare_buff) == 0)
   {
     relay_status[1] = OFF;
     relay_status_string[1] = '0';
   }
-  // Update trạng thái relay 3
-  if (strcmp(RELAY_3_ON, compare_buff) == 0)
+  // Update trạng thái relay 2
+  if (strcmp(RELAY_2_ON, compare_buff) == 0)
   {
     relay_status[2] = ON;
     relay_status_string[2] = '1';
   }
-  if (strcmp(RELAY_3_OFF, compare_buff) == 0)
+  if (strcmp(RELAY_2_OFF, compare_buff) == 0)
   {
     relay_status[2] = OFF;
     relay_status_string[2] = '0';
   }
-  // Update trạng thái relay 4
-  if (strcmp(RELAY_4_ON, compare_buff) == 0)
+  // Update trạng thái relay 3
+  if (strcmp(RELAY_3_ON, compare_buff) == 0)
   {
     relay_status[3] = ON;
     relay_status_string[3] = '1';
   }
-  if (strcmp(RELAY_4_OFF, compare_buff) == 0)
+  if (strcmp(RELAY_3_OFF, compare_buff) == 0)
   {
     relay_status[3] = OFF;
     relay_status_string[3] = '0';
+  }
+  // Update trạng thái relay 4
+  if (strcmp(RELAY_4_ON, compare_buff) == 0)
+  {
+    relay_status[4] = ON;
+    relay_status_string[4] = '1';
+  }
+  if (strcmp(RELAY_4_OFF, compare_buff) == 0)
+  {
+    relay_status[4] = OFF;
+    relay_status_string[4] = '0';
   }
 }
 
