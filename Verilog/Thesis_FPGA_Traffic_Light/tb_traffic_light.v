@@ -14,7 +14,7 @@ module tb_traffic_light;
     reg         rst_n;         // To dut of Den_Giao_Thong.v
     // End of automatics
 
-    /*AUTOWIRE*/
+    /* AUTO WIRE */
     // Beginning of automatic wires (for undeclared instantiated-module outputs)
     // Khoi tao wires cho Duong A, B
     wire [2:0]  street_a;           // From dut of Den_Giao_Thong.v
@@ -27,7 +27,7 @@ module tb_traffic_light;
     // dut (Device under test): Thiet bi duoc test
     Den_Giao_Thong dut
     (
-        /*AUTOINST*/
+        /* AUTO INST */
         // Outputs
         .street_a           (street_a[2:0]),        ///< Duong A
         .street_a_pri_lamp  (street_a_pri_lamp),    ///< Den uu tien duong A
@@ -37,17 +37,20 @@ module tb_traffic_light;
         .clk                (clk),                  ///< Chan clock
         .rst_n              (rst_n)                 ///< Chan reset
     );
-
+    
+    /* Define cac bien su dung trong module test */
     integer counter_data;        ///< Dung de luu gia tri mo file
     integer index;               ///< So luong lan lap lai
-    parameter DURATION = 1000;   ///< Thoi gian lap 100 chu ki
+    parameter DURATION = 1000;   ///< Thoi gian lap tinh theo chu ki
 
     // Open csv-file de write data vao
     initial
     begin
-        counter_data = $fopen("D:/Work_Place/Practice_space/Practice_SP/Verilog/Thesis_FPGA_Traffic_Light/output_file/counter_output.csv"); // Open file
+        // Open file
+        counter_data = $fopen("D:/Work_Place/Practice_space/Practice_SP/Verilog/Thesis_FPGA_Traffic_Light/output_file/counter_output.csv");
     end
-
+    
+    // Dung simulate va close file khi da du thoi gian can test
     always @(posedge clk)
     begin
         if (DURATION == index)
@@ -55,7 +58,6 @@ module tb_traffic_light;
             $stop;                  ///< Dung simulate
             $fclose(counter_data);  ///< Close file
         end
-        // index = index + 1;
     end
 
     // Khoi dong pin clock
@@ -66,7 +68,7 @@ module tb_traffic_light;
         begin
             #10             ///< Doi 10 chu ki
             clk = !clk;     ///< Dao gia tri cua clock
-            // $display("%5d,%3b,%1b,%3b,%1b", index, street_a, street_a_pri_lamp, street_b, street_b_pri_lamp);
+            /* In gia tri cua cac pin ra file counter_output.csv de kiem tra */
             $fdisplay(counter_data,"%d,%d,%d,%d,%b", index, street_a, street_a_pri_lamp, street_b, street_b_pri_lamp);
         end
     end
@@ -75,8 +77,10 @@ module tb_traffic_light;
     initial
     begin
         rst_n = 0;
-        #20
+        #20         ///< Doi sau 20 chu ki thi trigger reset 1 lan duy nhat
         rst_n = 1;
+        #1          ///< Doi sau 1 chu ki thi dua chan reset ve 0
+        rst_n = 0;
     end
 
 endmodule
