@@ -1,0 +1,257 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Den_Giao_Thong
+# storage
+db|Den_Giao_Thong.(0).cnf
+db|Den_Giao_Thong.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+C:|Users|Admin|Downloads|Code_verilog|traffic_light_controller.v
+1b6a1db7d3aa6ca3434321a5f76f0d2
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# macro_sequence
+
+# end
+# entity
+time_counter
+# storage
+db|Den_Giao_Thong.(1).cnf
+db|Den_Giao_Thong.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+C:|Users|Admin|Downloads|Code_verilog|time_counter.v
+128124f2d46ff5abd336390fd37b69b
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+GREEN_TIME
+29
+PARAMETER_SIGNED_DEC
+DEF
+YELLOW_TIME
+4
+PARAMETER_SIGNED_DEC
+DEF
+RED_TIME
+2
+PARAMETER_SIGNED_DEC
+DEF
+}
+# macro_sequence
+
+# end
+# entity
+fsm
+# storage
+db|Den_Giao_Thong.(2).cnf
+db|Den_Giao_Thong.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+C:|Users|Admin|Downloads|Code_verilog|fsm.v
+305b5c5ba91c277c167efaf6c4a883
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# macro_sequence
+
+# end
+# entity
+Den_Giao_Thong
+# storage
+db|Den_Giao_Thong.(3).cnf
+db|Den_Giao_Thong.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Den_Giao_Thong.v
+a45bb116a848137321fc7d5d92d1fea
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+time_counter
+# storage
+db|Den_Giao_Thong.(4).cnf
+db|Den_Giao_Thong.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+time_counter.v
+3d188458c518d9bee1461841d29a349
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+GREEN_TIME
+15
+PARAMETER_SIGNED_DEC
+DEF
+YELLOW_TIME
+5
+PARAMETER_SIGNED_DEC
+DEF
+RED_TIME
+2
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+time_counter:cnt
+}
+# macro_sequence
+
+# end
+# entity
+fsm
+# storage
+db|Den_Giao_Thong.(5).cnf
+db|Den_Giao_Thong.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+fsm.v
+54a5ca2e758112a604fc0ad3fce6316
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+fsm:fsm
+}
+# macro_sequence
+
+# end
+# complete
+
