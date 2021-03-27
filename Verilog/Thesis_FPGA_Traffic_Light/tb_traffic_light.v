@@ -37,7 +37,7 @@ module tb_traffic_light;
         .clk                (clk),                  ///< Chan clock
         .rst_n              (rst_n)                 ///< Chan reset
     );
-    
+
     /* Define cac bien su dung trong module test */
     integer counter_data;        ///< Dung de luu gia tri mo file
     integer index;               ///< So luong lan lap lai
@@ -49,7 +49,7 @@ module tb_traffic_light;
         // Open file
         counter_data = $fopen("D:/Work_Place/Practice_space/Practice_SP/Verilog/Thesis_FPGA_Traffic_Light/output_file/counter_output.csv");
     end
-    
+
     // Dung simulate va close file khi da du thoi gian can test
     always @(posedge clk)
     begin
