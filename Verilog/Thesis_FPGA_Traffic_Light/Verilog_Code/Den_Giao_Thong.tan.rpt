@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for Den_Giao_Thong
-Sat Mar 27 12:32:29 2021
+Sat Mar 27 20:33:41 2021
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
 
 
@@ -306,7 +306,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
-    Info: Processing started: Sat Mar 27 12:32:29 2021
+    Info: Processing started: Sat Mar 27 20:33:41 2021
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Den_Giao_Thong -c Den_Giao_Thong --timing_analysis_only
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "clk" is an undefined clock
@@ -382,8 +382,8 @@ Info: th for register "fsm:fsm|current_state[1]" (data pin = "rst_n", clock pin 
         Info: Total interconnect delay = 2.478 ns ( 62.29 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 192 megabytes
-    Info: Processing ended: Sat Mar 27 12:32:29 2021
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Sat Mar 27 20:33:42 2021
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

@@ -39,8 +39,8 @@ module tb_traffic_light;
     );
 
     /* Define cac bien su dung trong module test */
-    integer counter_data;        ///< Dung de luu gia tri mo file
-    integer index;               ///< So luong lan lap lai
+    integer   counter_data;        ///< Dung de luu gia tri mo file
+    integer   index;               ///< So luong lan lap lai
     parameter DURATION = 1000;   ///< Thoi gian lap tinh theo chu ki
 
     // Open csv-file de write data vao
@@ -64,6 +64,7 @@ module tb_traffic_light;
     initial
     begin
         clk = 0;
+        $fdisplay(counter_data,"Cycle,Stree_A,PriorityLampA,Stree_B,PriorityLampB");
         for (index = 0; index < DURATION; index = index + 1)
         begin
             #10             ///< Doi 10 chu ki
@@ -79,8 +80,6 @@ module tb_traffic_light;
         rst_n = 0;
         #20         ///< Doi sau 20 chu ki thi trigger reset 1 lan duy nhat
         rst_n = 1;
-        #1          ///< Doi sau 1 chu ki thi dua chan reset ve 0
-        rst_n = 0;
     end
 
 endmodule
