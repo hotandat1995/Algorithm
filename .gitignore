@@ -1,0 +1,28 @@
+
+# Exclude file of verilog project
+Verilog/**/Verilog_Code/*.pin
+Verilog/**/Verilog_Code/*.summary
+Verilog/**/Verilog_Code/*.rpt
+Verilog/**/Verilog_Code/*.bsf
+Verilog/**/Verilog_Code/*.done
+Verilog/**/Verilog_Code/*.dpf
+Verilog/**/Verilog_Code/*.vwf
+Verilog/**/Verilog_Code/*.pof
+Verilog/**/Verilog_Code/*.qpf
+Verilog/**/Verilog_Code/*.qsf
+Verilog/**/Verilog_Code/*.sof
+Verilog/**/Verilog_Code/*.bak
+Verilog/**/Verilog_Code/simulation
+Verilog/**/Verilog_Code/incremental_db
+Verilog/**/Verilog_Code/db
+# END - Exclude file of verilog project
+
+# Exclude file of Ki-cad project
+*.kicad_pcb-bak
+fp-info-cache
+*.sch-bak
+# END - Exclude file of Ki-cad project
+
+# Exclude temporary Excel file
+~$*.xlsx
+# END - Exclude temporary Excel file
