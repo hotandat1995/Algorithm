@@ -12,6 +12,7 @@ Verilog/**/Verilog_Code/*.qpf
 Verilog/**/Verilog_Code/*.qsf
 Verilog/**/Verilog_Code/*.sof
 Verilog/**/Verilog_Code/*.bak
+Verilog/**/Verilog_Code/*.qws
 Verilog/**/Verilog_Code/simulation
 Verilog/**/Verilog_Code/incremental_db
 Verilog/**/Verilog_Code/db

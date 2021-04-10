@@ -43,7 +43,7 @@ U 1 1 605FDAFC
 P 3300 2550
 F 0 "Q1" H 3490 2596 50  0000 L CNN
 F 1 "2SC1815" H 3490 2505 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3500 2475 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 3500 2475 50  0001 L CIN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 3300 2550 50  0001 L CNN
 	1    3300 2550
 	1    0    0    -1  
@@ -95,7 +95,7 @@ U 1 1 6060DCFE
 P 5100 2550
 F 0 "Q2" H 5290 2596 50  0000 L CNN
 F 1 "2SC1815" H 5290 2505 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5300 2475 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 5300 2475 50  0001 L CIN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 5100 2550 50  0001 L CNN
 	1    5100 2550
 	1    0    0    -1  
@@ -158,7 +158,7 @@ U 1 1 60618B68
 P 6650 2550
 F 0 "Q3" H 6840 2596 50  0000 L CNN
 F 1 "2SC1815" H 6840 2505 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6850 2475 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 6850 2475 50  0001 L CIN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 6650 2550 50  0001 L CNN
 	1    6650 2550
 	1    0    0    -1  
@@ -221,7 +221,7 @@ U 1 1 60618BA9
 P 8450 2550
 F 0 "Q4" H 8640 2596 50  0000 L CNN
 F 1 "2SC1815" H 8640 2505 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8650 2475 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 8650 2475 50  0001 L CIN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 8450 2550 50  0001 L CNN
 	1    8450 2550
 	1    0    0    -1  
@@ -284,7 +284,7 @@ U 1 1 60659274
 P 2700 5350
 F 0 "Q5" H 2890 5396 50  0000 L CNN
 F 1 "2SC1815" H 2890 5305 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2900 5275 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 2900 5275 50  0001 L CIN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 2700 5350 50  0001 L CNN
 	1    2700 5350
 	1    0    0    -1  
@@ -347,7 +347,7 @@ U 1 1 606592B5
 P 4500 5350
 F 0 "Q6" H 4690 5396 50  0000 L CNN
 F 1 "2SC1815" H 4690 5305 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4700 5275 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 4700 5275 50  0001 L CIN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 4500 5350 50  0001 L CNN
 	1    4500 5350
 	1    0    0    -1  
@@ -410,7 +410,7 @@ U 1 1 606592F6
 P 6050 5350
 F 0 "Q7" H 6240 5396 50  0000 L CNN
 F 1 "2SC1815" H 6240 5305 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6250 5275 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 6250 5275 50  0001 L CIN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 6050 5350 50  0001 L CNN
 	1    6050 5350
 	1    0    0    -1  
@@ -473,7 +473,7 @@ U 1 1 60659337
 P 7850 5350
 F 0 "Q8" H 8040 5396 50  0000 L CNN
 F 1 "2SC1815" H 8040 5305 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8050 5275 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 8050 5275 50  0001 L CIN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 7850 5350 50  0001 L CNN
 	1    7850 5350
 	1    0    0    -1  
@@ -733,6 +733,9 @@ F 3 "" H 1650 2850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1650 2850 1650 2750
+Connection ~ 1650 2750
+Wire Wire Line
+	1650 2750 1700 2750
 Wire Bus Line
 	1700 6150 8400 6150
 Wire Bus Line
@@ -741,7 +744,4 @@ Wire Bus Line
 	2100 3500 9050 3500
 Wire Bus Line
 	1800 1850 1800 2950
-Connection ~ 1650 2750
-Wire Wire Line
-	1650 2750 1700 2750
 $EndSCHEMATC
