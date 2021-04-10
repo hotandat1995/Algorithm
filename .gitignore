@@ -19,6 +19,7 @@ Verilog/**/Verilog_Code/db
 
 # Exclude file of Ki-cad project
 *.kicad_pcb-bak
+*.kicad_pcb-bak*
 fp-info-cache
 *.sch-bak
 # END - Exclude file of Ki-cad project
