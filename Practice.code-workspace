@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "..\\Flask_WorkSpace"
 		}
 	],
 	"settings": {}
